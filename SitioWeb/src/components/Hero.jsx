@@ -53,7 +53,7 @@ export default function Hero({ onOpenActa }) {
       >
         <div className="w-[650px] h-[650px] lg:w-[850px] lg:h-[850px] flex items-center justify-center">
           <img
-            src="/logo/logoOficialRELISE_transparent.png"
+            src="./logo/logoOficialRELISE_transparent.png"
             alt="Logo RELISE Fondo"
             className="w-full h-full object-contain filter drop-shadow-[0_0_100px_rgba(59,130,246,0.3)]"
           />
@@ -92,7 +92,7 @@ export default function Hero({ onOpenActa }) {
               }}
             >
               <img
-                src="/logo/logoOficialRELISE_transparent.png"
+                src="./logo/logoOficialRELISE_transparent.png"
                 alt="Emblema Oficial RELISE"
                 className="w-full h-full object-contain filter drop-shadow-md"
               />
@@ -124,7 +124,7 @@ export default function Hero({ onOpenActa }) {
                     >
                       <div className="relative w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-slate-950/95 hover:bg-slate-900 border-2 border-white/70 hover:border-amber-400 shadow-xl backdrop-blur-md transition-all duration-300 hover:scale-130 flex items-center justify-center cursor-pointer group-hover/flag:ring-4 group-hover/flag:ring-blue-400/50">
                         <img
-                          src={`/flags/${country.code.toLowerCase()}.png`}
+                          src={`./flags/${country.code.toLowerCase()}.png`}
                           alt={`Bandera de ${country.name}`}
                           className="w-5 h-3.5 sm:w-6 sm:h-4 object-cover rounded-xs shadow-sm"
                         />

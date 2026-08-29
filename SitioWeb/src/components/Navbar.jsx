@@ -36,7 +36,7 @@ export default function Navbar({ darkMode, setDarkMode, onOpenActa }) {
           <a href="#inicio" className="flex items-center gap-3.5 group">
             <div className="relative overflow-hidden rounded-2xl bg-white p-1.5 shadow-md border border-white/90 transition-transform group-hover:scale-105">
               <img 
-                src="/logo/logoOficialRELISE_transparent.png" 
+                src="./logo/logoOficialRELISE_transparent.png" 
                 alt="Logo RELISE" 
                 className="h-11 w-11 sm:h-12 sm:w-12 object-contain"
               />

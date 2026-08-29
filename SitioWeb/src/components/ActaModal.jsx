@@ -52,7 +52,7 @@ export default function ActaModal({ isOpen, onClose }) {
         <div className="p-6 sm:p-10 space-y-8 text-slate-800 dark:text-slate-200 leading-relaxed text-sm">
           <div className="text-center pb-6 border-b border-slate-200 dark:border-slate-800">
             <div className="w-24 h-24 mx-auto mb-3 rounded-2xl overflow-hidden shadow-md border border-slate-200 dark:border-slate-700 bg-white p-2 flex items-center justify-center">
-              <img src="/logo/logoOficialRELISE_transparent.png" alt="RELISE" className="w-full h-full object-contain" />
+              <img src="./logo/logoOficialRELISE_transparent.png" alt="RELISE" className="w-full h-full object-contain" />
             </div>
             <h2 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight uppercase">
               Acta Constitutiva

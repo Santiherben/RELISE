@@ -10,7 +10,7 @@
     "title": "Prof. de Informática, Lic. en Pedagogía, Esp. en Tecnología Educativa",
     "category": "Investigador consolidado",
     "email": "santiago.hernandez@cfe.edu.uy",
-    "photo": "/photos/extracted_Abstract breve Santiago Hernández_image1.jpg",
+    "photo": "./photos/extracted_Abstract breve Santiago Hernández_image1.jpg",
     "orcid": "https://orcid.org/0009-0001-9086-1490",
     "linkedin": "",
     "bio": "Profesor de Informática egresado de INET y Licenciado en Pedagogía por el MEC Uruguay. Maestrando en Educación en ORT Uruguay y doctorando en Ciencias Sociales con orientación en Educación en la UNLP. Especialista en Tecnología Educativa por FLACSO Argentina. Formación en Inteligencia Artificial, Pensamiento Computacional, Programación y Ciudadanía Digital. Docente en formación docente y educación media en Uruguay, y contenidista de informática en el espacio EDyTIC de la DGES. Investigador en didáctica de las ciencias computacionales y uso de Inteligencia Artificial Generativa en formación docente.",
@@ -26,7 +26,7 @@
       "Desarrollo de contenidos y marcos pedagógicos de informática para DGES-EDyTIC.",
       "Organizador de encuentros y jornadas académicas de innovación tecnológica educativa."
     ],
-    "flag": "/flags/uy.png"
+    "flag": "./flags/uy.png"
   },
   {
     "id": "diego-daluz",
@@ -39,7 +39,7 @@
     "title": "Prof. de Educación Media, Magíster en Educación, Doctorando en Educación",
     "category": "Investigador consolidado",
     "email": "diego.daluz@cfe.edu.uy",
-    "photo": "/photos/extracted_Abstract breve Diego Daluz_image1.png",
+    "photo": "./photos/extracted_Abstract breve Diego Daluz_image1.png",
     "orcid": "https://orcid.org/0009-0007-3089-6652",
     "linkedin": "",
     "bio": "Profesor de Educación Media especialidad Informática. Educador Técnico y Gestor de Tecnologías Digitales. Doctorando en Ciencias de la Educación en la Universidad Nacional de La Plata (UNLP). Magíster en Educación y Magíster en Dirección y Gestión de Centros Educativos. Diplomado en Educación, Formación de Formadores y Ciencias Sociales con mención en Nuevas Tecnologías. Formador de docentes de grado en el Consejo de Formación en Educación (CFE-ANEP) y docente en DGES-DGETP. Referente de Tecnología en el Centro de Recursos para Estudiantes con Discapacidad Visual (CERESO - DGES).",
@@ -54,7 +54,7 @@
       "Publicaciones académicas sobre impacto de IA generativa en el aula.",
       "Conferencista en congresos nacionales e internacionales de educación y tecnología."
     ],
-    "flag": "/flags/uy.png"
+    "flag": "./flags/uy.png"
   },
   {
     "id": "reisner-ravelo",
@@ -67,7 +67,7 @@
     "title": "Doctor en Ciencias Sociales, Niñez y Juventud",
     "category": "Investigador consolidado",
     "email": "profe.reisner@gmail.com",
-    "photo": "/photos/extracted_Prof. REISNER RAVELO.-_image1.png",
+    "photo": "./photos/extracted_Prof. REISNER RAVELO.-_image1.png",
     "orcid": "https://orcid.org/0000-0001-6455-5425",
     "linkedin": "",
     "bio": "Doctor en Ciencias Sociales, Niñez y Juventud (2025). Magíster en Desarrollo Educativo y Social (2009), Especialista en Pedagogía (2005) y Licenciado en Ciencias Sociales (2001). Amplia trayectoria liderando proyectos internacionales de investigación social y educativa. Miembro de grupos de investigación categorizados MinCiencias (GIEEP Cat B, Veritas AID Cat B). Profesor invitado por programas doctorales en Universidad Peruana Cayetano Heredia (Perú) y Universidad de la República (Uruguay). Experto en gestión editorial de revistas científicas.",
@@ -82,7 +82,7 @@
       "Profesor invitado en programas doctorales de Perú y Uruguay.",
       "Evaluador y gestor editorial de revistas indexadas internacionales."
     ],
-    "flag": "/flags/co.png"
+    "flag": "./flags/co.png"
   },
   {
     "id": "omar-alexis-elias",
@@ -95,7 +95,7 @@
     "title": "Doctor en Educación, Mtro. en Administración de Instituciones Educativas",
     "category": "Investigador consolidado",
     "email": "Alexissegura.edu@gmail.com",
-    "photo": "/photos/Imagen (2) (1) - Alexis Segura.jpeg",
+    "photo": "./photos/Imagen (2) (1) - Alexis Segura.jpeg",
     "orcid": "https://orcid.org/0000-0001-7510-5737",
     "linkedin": "",
     "bio": "Profesor, investigador y directivo educativo. Licenciado en Pedagogía por la Universidad Veracruzana, Maestro en Administración de Instituciones Educativas por el IEU y Doctor en Educación por UO Global Universidad Online. Ponente e investigador en foros internacionales de educación, bienestar emocional y responsabilidad social. Especialista en diseño curricular, dirección escolar y capacitación docente en todos los niveles del sistema educativo.",
@@ -110,7 +110,7 @@
       "Desarrollador de programas formativos online y modelos pedagógicos virtuales.",
       "Asesor institucional en planeación educativa y gestión escolar."
     ],
-    "flag": "/flags/mx.png"
+    "flag": "./flags/mx.png"
   },
   {
     "id": "angela-rodriguez",
@@ -123,7 +123,7 @@
     "title": "Magíster en Desarrollo Social y Educativo, Trabajadora Social, Doctoranda en Educación",
     "category": "Investigadora consolidada",
     "email": "alegnaor@gmail.com",
-    "photo": "/photos/foto ibero - Angela Rodríguez Rodriguez.jpg",
+    "photo": "./photos/foto ibero - Angela Rodríguez Rodriguez.jpg",
     "orcid": "https://orcid.org/0009-0007-4886-5301",
     "linkedin": "",
     "bio": "Trabajadora Social, Magíster en Desarrollo Social y Educativo y Doctoranda en Educación. Diplomada como e-mediadora en Ambientes Virtuales de Aprendizaje (AVA) y en competencias docentes. Docente universitaria en postgrados (maestría y especialización). Amplia experiencia en formulación e implementación de políticas públicas con enfoque de género, diversidad, inclusión e interculturalidad, así como trabajo directo con comunidades en condición de vulnerabilidad.",
@@ -138,7 +138,7 @@
       "Docente investigadora de maestrías en educación con modalidad virtual.",
       "Articuladora de procesos formativos con comunidades diversas en Colombia."
     ],
-    "flag": "/flags/co.png"
+    "flag": "./flags/co.png"
   },
   {
     "id": "maria-eugenia-rodino",
@@ -151,7 +151,7 @@
     "title": "Magíster en Diseño de Ambientes de Aprendizaje, Tecnóloga LSU-Español, Doctoranda en Educación",
     "category": "Investigadora joven",
     "email": "mariaeugenia.rodino@fhce.edu.uy",
-    "photo": "/photos/Fotografía ME - María Eugenia Rodino.jpg",
+    "photo": "./photos/Fotografía ME - María Eugenia Rodino.jpg",
     "orcid": "https://orcid.org/0009-0001-9086-1490",
     "linkedin": "",
     "bio": "Tecnóloga en Interpretación y Traducción LSU-Español por UdelaR y Técnica en Interpretación por INCOSUR. Magíster en Diseño de Ambientes de Aprendizaje por UTEC y Doctoranda en Educación por la Universidad Nacional de La Plata. Docente e investigadora en la Facultad de Humanidades y Ciencias de la Educación (UdelaR). Investigadora en estudios de la comunidad sorda, accesibilidad comunicacional, traducción y ambientes de aprendizaje inclusivos.",
@@ -166,7 +166,7 @@
       "Docente en la Licenciatura y Tecnicatura en Interpretación LSU-Español de UdelaR.",
       "Impulsora de entornos pedagógicos digitales accesibles y bilingües."
     ],
-    "flag": "/flags/uy.png"
+    "flag": "./flags/uy.png"
   },
   {
     "id": "magaly-rodriguez",
@@ -179,7 +179,7 @@
     "title": "Máster en Administración Educativa, Licenciada en Biología Tropical",
     "category": "Investigadora consolidada",
     "email": "maga.calvo1@gmail.com",
-    "photo": "/photos/extracted_Resumen breve Magaly Rodríguez_image1.jpeg",
+    "photo": "./photos/extracted_Resumen breve Magaly Rodríguez_image1.jpeg",
     "orcid": "https://orcid.org/0000-0002-1046-2212",
     "linkedin": "",
     "bio": "Máster en Administración Educativa de la UNED de Costa Rica y Licenciada en Biología Tropical con énfasis en Manejo de los Recursos Naturales por la Universidad Nacional de Costa Rica (UNA). Actualmente coordina la Cátedra de Ciencias Naturales en la Escuela de Ciencias Exactas y Naturales de la UNED. Lidera proyectos de investigación, docencia y extensión en educación científica a distancia, fauna costarricense y estrategias de mediación pedagógica inclusiva.",
@@ -194,7 +194,7 @@
       "Creadora de múltiples series audiovisuales didácticas de fauna de Costa Rica para UNED.",
       "Publicaciones científicas sobre mediación pedagógica y evaluación práctica en educación superior a distancia."
     ],
-    "flag": "/flags/cr.png"
+    "flag": "./flags/cr.png"
   },
   {
     "id": "idania-valverde",
@@ -207,7 +207,7 @@
     "title": "Máster en Ciencias de la Educación, Licenciada en Manejo de Recursos Naturales",
     "category": "Investigadora consolidada",
     "email": "ivalverde@uned.ac.cr",
-    "photo": "/photos/IVR - Idania Valverde.jpeg",
+    "photo": "./photos/IVR - Idania Valverde.jpeg",
     "orcid": "https://orcid.org/0000-0001-6112-4814",
     "linkedin": "",
     "bio": "Máster en Ciencias de la Educación con énfasis en Docencia y Licenciada en Manejo de Recursos Naturales. Coordinadora de la Cátedra de Ecología y Educación Ambiental en la Escuela de Ciencias Exactas y Naturales de la UNED de Costa Rica. Investigadora en áreas de etnozoología, educación ambiental, metodologías prácticas en educación virtual y estudios de reproducción biológica.",
@@ -222,7 +222,7 @@
       "Publicaciones en revistas internacionales sobre evaluación de aprendizajes prácticos y fauna silvestre.",
       "Desarrollo de proyectos interdisciplinarios de extensión ecológica y comunitaria."
     ],
-    "flag": "/flags/cr.png"
+    "flag": "./flags/cr.png"
   },
   {
     "id": "javier-ramirez",
@@ -248,7 +248,7 @@
       "Investigador en políticas comparadas de educación en América Latina.",
       "Docente universitario en relaciones internacionales y pedagogía."
     ],
-    "flag": "/flags/co.png"
+    "flag": "./flags/co.png"
   },
   {
     "id": "charito-tavara",
@@ -274,7 +274,7 @@
       "Investigadora en tutoría universitaria y acompañamiento socioeducativo en Perú.",
       "Desarrollo de estrategias pedagógicas para la atención a la diversidad."
     ],
-    "flag": "/flags/pe.png"
+    "flag": "./flags/pe.png"
   },
   {
     "id": "patricio-carreno",
@@ -300,6 +300,6 @@
       "Promotor de iniciativas de ciudadanía activa en comunidades escolares y universitarias.",
       "Articulador del nodo chileno de RELISE."
     ],
-    "flag": "/flags/cl.png"
+    "flag": "./flags/cl.png"
   }
 ]
