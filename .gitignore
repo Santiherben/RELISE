@@ -1,0 +1,14 @@
+﻿# Dependencies
+node_modules/
+SitioWeb/node_modules/
+
+# Logs and environment
+*.log
+.env
+.env.local
+
+# Editor directories
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,119 @@
+[
+  {
+    "id": "pub-1",
+    "title": "Capítulo: Experiencia de traducción en la serie Identidades",
+    "authors": "María Eugenia Rodino",
+    "year": "2024",
+    "type": "Capítulo de Libro",
+    "publisher": "Facultad de Humanidades y Ciencias de la Educación (UdelaR)",
+    "isbn": "9789974011199",
+    "doi": "",
+    "url": "",
+    "topic": "Lengua de Señas, Cultura Sorda y Accesibilidad"
+  },
+  {
+    "id": "pub-2",
+    "title": "Gira de campo: Acompañamiento didáctico y práctico para el docente",
+    "authors": "Magaly Rodríguez Calvo",
+    "year": "2018",
+    "type": "Libro",
+    "publisher": "Editorial Académica Española",
+    "isbn": "978-620-2-13614-3",
+    "doi": "",
+    "url": "",
+    "topic": "Ciencias Naturales y Didáctica"
+  },
+  {
+    "id": "pub-3",
+    "title": "Estrategias de evaluación de los aprendizajes en laboratorios y giras de campo de la carrera Manejo de Recursos Naturales durante la Covid-19",
+    "authors": "Idania Valverde Rojas, Magaly Rodríguez Calvo",
+    "year": "2023",
+    "type": "Artículo de Revista",
+    "publisher": "Revista Repertorio Científico",
+    "issn": "2215-5651",
+    "doi": "",
+    "url": "",
+    "topic": "Educación a Distancia y Evaluación"
+  },
+  {
+    "id": "pub-4",
+    "title": "Estrategias metodológicas en actividades prácticas de la carrera Manejo de Recursos Naturales de la UNED durante la pandemia por la COVID-19",
+    "authors": "Magaly Rodríguez Calvo, Idania Valverde Rojas",
+    "year": "2022",
+    "type": "Artículo de Revista",
+    "publisher": "Revista Innovaciones Educativas",
+    "issn": "2215-4132",
+    "doi": "",
+    "url": "",
+    "topic": "Innovación Educativa y Prácticas Virtuales"
+  },
+  {
+    "id": "pub-5",
+    "title": "Percepción del estudiantado de Manejo de Recursos Naturales con respecto a las estrategias metodológicas virtuales de asignaturas con componente práctico en tiempos de COVID-19",
+    "authors": "Idania Valverde Rojas, Magaly Rodríguez Calvo",
+    "year": "2023",
+    "type": "Artículo de Revista",
+    "publisher": "Revista electrónica Calidad en la Educación Superior",
+    "issn": "1659-4703",
+    "doi": "",
+    "url": "",
+    "topic": "Calidad en Educación Superior"
+  },
+  {
+    "id": "pub-6",
+    "title": "Effects of Hemoparasites and Ticks on Hematologic Response in Wild Black Spiny-Tailed Iguanas (Ctenosaura similis, Squamata: Iguanidae) From Costa Rica",
+    "authors": "Idania Valverde Rojas et al.",
+    "year": "2022",
+    "type": "Artículo de Revista",
+    "publisher": "International Journal of Wildlife & Ecology",
+    "doi": "",
+    "url": "",
+    "topic": "Biología y Recursos Naturales"
+  },
+  {
+    "id": "pub-7",
+    "title": "Infancias, Subjetividades y Procesos de Paz en Colombia",
+    "authors": "Reisner de Jesús Ravelo Méndez",
+    "year": "2024",
+    "type": "Artículo de Revista",
+    "publisher": "Revista REMUVAC",
+    "doi": "10.69821/remuvac.v1i2.115",
+    "url": "https://doi.org/10.69821/remuvac.v1i2.115",
+    "topic": "Ciencias Sociales y Juventud"
+  },
+  {
+    "id": "pub-8",
+    "title": "Audiovisuales didácticos para promover las competencias científicas en la educación a distancia",
+    "authors": "Magaly Rodríguez Calvo",
+    "year": "2017",
+    "type": "Artículo de Revista",
+    "publisher": "Revista Innovaciones Educativas",
+    "issn": "2215-4132",
+    "doi": "",
+    "url": "",
+    "topic": "Competencias Científicas y Tecnología"
+  },
+  {
+    "id": "pub-9",
+    "title": "Serie Audiovisual Didáctica: Fauna de Costa Rica (Ungulados, Manigordos, Monos reyes, Aves de bosque y humedales)",
+    "authors": "Magaly Rodríguez Calvo",
+    "year": "2018-2023",
+    "type": "Recurso Audiovisual / Libro Multimedia",
+    "publisher": "Programa de Audiovisuales - UNED Costa Rica",
+    "isbn": "978-9968-520-07-2",
+    "doi": "",
+    "url": "",
+    "topic": "Educación Ambiental y Recursos Abiertos"
+  },
+  {
+    "id": "pub-10",
+    "title": "Inteligencia Artificial Generativa y la Transformación del Rol Docente: Retos y Oportunidades en América Latina",
+    "authors": "Santiago Hernández, Diego Daluz",
+    "year": "2025",
+    "type": "Ponencia & Artículo en Revisión",
+    "publisher": "Memorias Académicas RELISE",
+    "doi": "",
+    "url": "",
+    "topic": "Inteligencia Artificial y Educación"
+  }
+]

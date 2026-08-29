@@ -1,0 +1,29 @@
+[
+  {
+    "id": "event-1",
+    "title": "Ciclo Internacional de Disertaciones RELISE 2026",
+    "date": "Mensual (2026)",
+    "mode": "Virtual (Transmisión Abierta)",
+    "category": "Seminario / Disertación",
+    "description": "Ciclo de conferencias mensuales donde investigadores de la Red y académicos invitados presentan avances sobre IA en educación, políticas públicas, inclusión y ciencias naturales.",
+    "status": "En curso"
+  },
+  {
+    "id": "event-2",
+    "title": "I Webinar Latinoamericano de Investigación Social y Educativa",
+    "date": "Octubre 2026",
+    "mode": "Virtual Internacional",
+    "category": "Webinar",
+    "description": "Encuentro regional para socializar los proyectos colaborativos de la Red, memorias académicas y presentación del libro colectivo RELISE 2026.",
+    "status": "Próximamente"
+  },
+  {
+    "id": "event-3",
+    "title": "Jornadas de Innovación Educativa y Tecnologías Digitales",
+    "date": "Julio 2026",
+    "mode": "Híbrido (Montevideo / En línea)",
+    "category": "Congreso",
+    "description": "Espacio de debate y talleres prácticos en torno al uso de Inteligencia Artificial en aulas y el fortalecimiento de la ciudadanía digital.",
+    "status": "Convocatoria Abierta"
+  }
+]

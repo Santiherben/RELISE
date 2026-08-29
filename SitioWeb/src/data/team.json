@@ -1,0 +1,305 @@
+[
+  {
+    "id": "santiago-hernandez",
+    "name": "Santiago Hernández Bentancur",
+    "role": "Miembro Fundador & Nodo Uruguay",
+    "country": "Uruguay",
+    "countryCode": "UY",
+    "city": "Montevideo",
+    "institution": "ANEP / CFE / DGES - EDyTIC / ORT / UNLP",
+    "title": "Prof. de Informática, Lic. en Pedagogía, Esp. en Tecnología Educativa",
+    "category": "Investigador consolidado",
+    "email": "santiago.hernandez@cfe.edu.uy",
+    "photo": "/photos/extracted_Abstract breve Santiago Hernández_image1.jpg",
+    "orcid": "https://orcid.org/0009-0001-9086-1490",
+    "linkedin": "",
+    "bio": "Profesor de Informática egresado de INET y Licenciado en Pedagogía por el MEC Uruguay. Maestrando en Educación en ORT Uruguay y doctorando en Ciencias Sociales con orientación en Educación en la UNLP. Especialista en Tecnología Educativa por FLACSO Argentina. Formación en Inteligencia Artificial, Pensamiento Computacional, Programación y Ciudadanía Digital. Docente en formación docente y educación media en Uruguay, y contenidista de informática en el espacio EDyTIC de la DGES. Investigador en didáctica de las ciencias computacionales y uso de Inteligencia Artificial Generativa en formación docente.",
+    "areas": [
+      "Inteligencia Artificial en educación",
+      "Formación docente y pedagogía digital",
+      "Didáctica de las ciencias computacionales",
+      "Ciudadanía digital y pensamiento computacional",
+      "Recursos Educativos Abiertos (REA)"
+    ],
+    "highlights": [
+      "Investigación sobre adopción e impacto de IA Generativa en la formación docente.",
+      "Desarrollo de contenidos y marcos pedagógicos de informática para DGES-EDyTIC.",
+      "Organizador de encuentros y jornadas académicas de innovación tecnológica educativa."
+    ],
+    "flag": "/flags/uy.png"
+  },
+  {
+    "id": "diego-daluz",
+    "name": "Diego Enrique Daluz Veras",
+    "role": "Miembro Fundador & Nodo Uruguay",
+    "country": "Uruguay",
+    "countryCode": "UY",
+    "city": "Montevideo",
+    "institution": "CFE - ANEP / DGES - DGETP / CERESO",
+    "title": "Prof. de Educación Media, Magíster en Educación, Doctorando en Educación",
+    "category": "Investigador consolidado",
+    "email": "diego.daluz@cfe.edu.uy",
+    "photo": "/photos/extracted_Abstract breve Diego Daluz_image1.png",
+    "orcid": "https://orcid.org/0009-0007-3089-6652",
+    "linkedin": "",
+    "bio": "Profesor de Educación Media especialidad Informática. Educador Técnico y Gestor de Tecnologías Digitales. Doctorando en Ciencias de la Educación en la Universidad Nacional de La Plata (UNLP). Magíster en Educación y Magíster en Dirección y Gestión de Centros Educativos. Diplomado en Educación, Formación de Formadores y Ciencias Sociales con mención en Nuevas Tecnologías. Formador de docentes de grado en el Consejo de Formación en Educación (CFE-ANEP) y docente en DGES-DGETP. Referente de Tecnología en el Centro de Recursos para Estudiantes con Discapacidad Visual (CERESO - DGES).",
+    "areas": [
+      "Desarrollo profesional docente",
+      "Educación inclusiva y tecnologías accesibles",
+      "Inteligencia Artificial Generativa en formación docente",
+      "Gestión de centros educativos y entornos digitales"
+    ],
+    "highlights": [
+      "Investigador en tecnologías accesibles para estudiantes con discapacidad visual.",
+      "Publicaciones académicas sobre impacto de IA generativa en el aula.",
+      "Conferencista en congresos nacionales e internacionales de educación y tecnología."
+    ],
+    "flag": "/flags/uy.png"
+  },
+  {
+    "id": "reisner-ravelo",
+    "name": "Dr. Reisner de Jesús Ravelo Méndez",
+    "role": "Miembro Fundador & Nodo Colombia",
+    "country": "Colombia",
+    "countryCode": "CO",
+    "city": "Bogotá",
+    "institution": "Corporación Universitaria Iberoamericana / MinCiencias",
+    "title": "Doctor en Ciencias Sociales, Niñez y Juventud",
+    "category": "Investigador consolidado",
+    "email": "profe.reisner@gmail.com",
+    "photo": "/photos/extracted_Prof. REISNER RAVELO.-_image1.png",
+    "orcid": "https://orcid.org/0000-0001-6455-5425",
+    "linkedin": "",
+    "bio": "Doctor en Ciencias Sociales, Niñez y Juventud (2025). Magíster en Desarrollo Educativo y Social (2009), Especialista en Pedagogía (2005) y Licenciado en Ciencias Sociales (2001). Amplia trayectoria liderando proyectos internacionales de investigación social y educativa. Miembro de grupos de investigación categorizados MinCiencias (GIEEP Cat B, Veritas AID Cat B). Profesor invitado por programas doctorales en Universidad Peruana Cayetano Heredia (Perú) y Universidad de la República (Uruguay). Experto en gestión editorial de revistas científicas.",
+    "areas": [
+      "Ciencias sociales y educación",
+      "Inclusión e interculturalidad en América Latina",
+      "Cultura, subjetividad y poder",
+      "Gestión editorial científica y evaluación por pares"
+    ],
+    "highlights": [
+      "Líder de investigaciones internacionales sobre infancias, juventudes y subjetividad.",
+      "Profesor invitado en programas doctorales de Perú y Uruguay.",
+      "Evaluador y gestor editorial de revistas indexadas internacionales."
+    ],
+    "flag": "/flags/co.png"
+  },
+  {
+    "id": "omar-alexis-elias",
+    "name": "Dr. Omar Alexis Elías Segura",
+    "role": "Miembro Fundador & Nodo México",
+    "country": "México",
+    "countryCode": "MX",
+    "city": "Puebla",
+    "institution": "UO Global Universidad Online / Universidad Veracruzana",
+    "title": "Doctor en Educación, Mtro. en Administración de Instituciones Educativas",
+    "category": "Investigador consolidado",
+    "email": "Alexissegura.edu@gmail.com",
+    "photo": "/photos/Imagen (2) (1) - Alexis Segura.jpeg",
+    "orcid": "https://orcid.org/0000-0001-7510-5737",
+    "linkedin": "",
+    "bio": "Profesor, investigador y directivo educativo. Licenciado en Pedagogía por la Universidad Veracruzana, Maestro en Administración de Instituciones Educativas por el IEU y Doctor en Educación por UO Global Universidad Online. Ponente e investigador en foros internacionales de educación, bienestar emocional y responsabilidad social. Especialista en diseño curricular, dirección escolar y capacitación docente en todos los niveles del sistema educativo.",
+    "areas": [
+      "Dirección y administración educativa",
+      "Diseño curricular e instruccional",
+      "Educación para la paz y bienestar socioemocional",
+      "Formación y capacitación docente"
+    ],
+    "highlights": [
+      "Ponente internacional en encuentros de pedagogía y humanismo educativo.",
+      "Desarrollador de programas formativos online y modelos pedagógicos virtuales.",
+      "Asesor institucional en planeación educativa y gestión escolar."
+    ],
+    "flag": "/flags/mx.png"
+  },
+  {
+    "id": "angela-rodriguez",
+    "name": "Mg. Ángela Rodríguez Rodríguez",
+    "role": "Miembro Fundador & Nodo Colombia",
+    "country": "Colombia",
+    "countryCode": "CO",
+    "city": "Bogotá / Junín",
+    "institution": "Corporación Universitaria Iberoamericana / Univ. de La Salle",
+    "title": "Magíster en Desarrollo Social y Educativo, Trabajadora Social, Doctoranda en Educación",
+    "category": "Investigadora consolidada",
+    "email": "alegnaor@gmail.com",
+    "photo": "/photos/foto ibero - Angela Rodríguez Rodriguez.jpg",
+    "orcid": "https://orcid.org/0009-0007-4886-5301",
+    "linkedin": "",
+    "bio": "Trabajadora Social, Magíster en Desarrollo Social y Educativo y Doctoranda en Educación. Diplomada como e-mediadora en Ambientes Virtuales de Aprendizaje (AVA) y en competencias docentes. Docente universitaria en postgrados (maestría y especialización). Amplia experiencia en formulación e implementación de políticas públicas con enfoque de género, diversidad, inclusión e interculturalidad, así como trabajo directo con comunidades en condición de vulnerabilidad.",
+    "areas": [
+      "Políticas públicas y enfoque de género",
+      "Inclusión e interculturalidad en proyectos de investigación",
+      "Ambientes digitales incluyentes y mediación en AVA",
+      "Desarrollo social y comunitario"
+    ],
+    "highlights": [
+      "Formulación de proyectos para políticas públicas de inclusión y equidad de género.",
+      "Docente investigadora de maestrías en educación con modalidad virtual.",
+      "Articuladora de procesos formativos con comunidades diversas en Colombia."
+    ],
+    "flag": "/flags/co.png"
+  },
+  {
+    "id": "maria-eugenia-rodino",
+    "name": "Mg. María Eugenia Rodino Bueno",
+    "role": "Miembro Fundador & Nodo Uruguay",
+    "country": "Uruguay",
+    "countryCode": "UY",
+    "city": "Montevideo",
+    "institution": "Universidad de la República (UdelaR) FHCE / UTEC / UNLP",
+    "title": "Magíster en Diseño de Ambientes de Aprendizaje, Tecnóloga LSU-Español, Doctoranda en Educación",
+    "category": "Investigadora joven",
+    "email": "mariaeugenia.rodino@fhce.edu.uy",
+    "photo": "/photos/Fotografía ME - María Eugenia Rodino.jpg",
+    "orcid": "https://orcid.org/0009-0001-9086-1490",
+    "linkedin": "",
+    "bio": "Tecnóloga en Interpretación y Traducción LSU-Español por UdelaR y Técnica en Interpretación por INCOSUR. Magíster en Diseño de Ambientes de Aprendizaje por UTEC y Doctoranda en Educación por la Universidad Nacional de La Plata. Docente e investigadora en la Facultad de Humanidades y Ciencias de la Educación (UdelaR). Investigadora en estudios de la comunidad sorda, accesibilidad comunicacional, traducción y ambientes de aprendizaje inclusivos.",
+    "areas": [
+      "Educación inclusiva y accesibilidad",
+      "Lenguas de señas (LSU) y cultura sorda",
+      "Traducción e interpretación en contextos educativos",
+      "Diseño de ambientes de aprendizaje accesibles"
+    ],
+    "highlights": [
+      "Autora de capítulos y publicaciones sobre traducción LSU e identidades sordas.",
+      "Docente en la Licenciatura y Tecnicatura en Interpretación LSU-Español de UdelaR.",
+      "Impulsora de entornos pedagógicos digitales accesibles y bilingües."
+    ],
+    "flag": "/flags/uy.png"
+  },
+  {
+    "id": "magaly-rodriguez",
+    "name": "MSc. Magaly Rodríguez Calvo",
+    "role": "Miembro Fundador & Nodo Costa Rica",
+    "country": "Costa Rica",
+    "countryCode": "CR",
+    "city": "Alajuela",
+    "institution": "Universidad Estatal a Distancia (UNED Costa Rica)",
+    "title": "Máster en Administración Educativa, Licenciada en Biología Tropical",
+    "category": "Investigadora consolidada",
+    "email": "maga.calvo1@gmail.com",
+    "photo": "/photos/extracted_Resumen breve Magaly Rodríguez_image1.jpeg",
+    "orcid": "https://orcid.org/0000-0002-1046-2212",
+    "linkedin": "",
+    "bio": "Máster en Administración Educativa de la UNED de Costa Rica y Licenciada en Biología Tropical con énfasis en Manejo de los Recursos Naturales por la Universidad Nacional de Costa Rica (UNA). Actualmente coordina la Cátedra de Ciencias Naturales en la Escuela de Ciencias Exactas y Naturales de la UNED. Lidera proyectos de investigación, docencia y extensión en educación científica a distancia, fauna costarricense y estrategias de mediación pedagógica inclusiva.",
+    "areas": [
+      "Educación científica y ciencias naturales a distancia",
+      "Estrategias pedagógicas inclusivas en giras de campo",
+      "Producción de recursos audiovisuales didácticos de biodiversidad",
+      "Manejo de recursos naturales y fauna silvestre"
+    ],
+    "highlights": [
+      "Autora del libro 'Gira de campo: Acompañamiento didáctico y práctico para el docente'.",
+      "Creadora de múltiples series audiovisuales didácticas de fauna de Costa Rica para UNED.",
+      "Publicaciones científicas sobre mediación pedagógica y evaluación práctica en educación superior a distancia."
+    ],
+    "flag": "/flags/cr.png"
+  },
+  {
+    "id": "idania-valverde",
+    "name": "MSc. Idania Valverde Rojas",
+    "role": "Miembro Fundador & Nodo Costa Rica",
+    "country": "Costa Rica",
+    "countryCode": "CR",
+    "city": "San José",
+    "institution": "Universidad Estatal a Distancia (UNED Costa Rica)",
+    "title": "Máster en Ciencias de la Educación, Licenciada en Manejo de Recursos Naturales",
+    "category": "Investigadora consolidada",
+    "email": "ivalverde@uned.ac.cr",
+    "photo": "/photos/IVR - Idania Valverde.jpeg",
+    "orcid": "https://orcid.org/0000-0001-6112-4814",
+    "linkedin": "",
+    "bio": "Máster en Ciencias de la Educación con énfasis en Docencia y Licenciada en Manejo de Recursos Naturales. Coordinadora de la Cátedra de Ecología y Educación Ambiental en la Escuela de Ciencias Exactas y Naturales de la UNED de Costa Rica. Investigadora en áreas de etnozoología, educación ambiental, metodologías prácticas en educación virtual y estudios de reproducción biológica.",
+    "areas": [
+      "Ecología y educación ambiental",
+      "Etnozoología y etnobiología",
+      "Metodologías virtuales en asignaturas prácticas de ciencias",
+      "Conservación y manejo de fauna silvestre"
+    ],
+    "highlights": [
+      "Coordinadora académica en la Escuela de Ciencias Exactas y Naturales (UNED).",
+      "Publicaciones en revistas internacionales sobre evaluación de aprendizajes prácticos y fauna silvestre.",
+      "Desarrollo de proyectos interdisciplinarios de extensión ecológica y comunitaria."
+    ],
+    "flag": "/flags/cr.png"
+  },
+  {
+    "id": "javier-ramirez",
+    "name": "Mg. Javier Ramírez Narváez",
+    "role": "Miembro Fundador & Nodo Colombia",
+    "country": "Colombia",
+    "countryCode": "CO",
+    "city": "Bogotá",
+    "institution": "Universidad Cuauhtémoc",
+    "title": "Magíster en Educación, Profesional en Relaciones Internacionales y Estudios Políticos, Doctorando en Educación",
+    "category": "Investigador consolidado",
+    "email": "contacto@relise.org",
+    "photo": "",
+    "orcid": "https://orcid.org/0000-0003-0849-1951",
+    "linkedin": "",
+    "bio": "Profesional en Relaciones Internacionales y Estudios Políticos, Magíster en Educación y Doctorando en Ciencias de la Educación. Investigador en dinámicas socioeducativas, políticas internacionales y modelos formativos regionales.",
+    "areas": [
+      "Relaciones internacionales y políticas educativas",
+      "Ciencias de la educación en América Latina",
+      "Estudios políticos y gobernanza educativa"
+    ],
+    "highlights": [
+      "Investigador en políticas comparadas de educación en América Latina.",
+      "Docente universitario en relaciones internacionales y pedagogía."
+    ],
+    "flag": "/flags/co.png"
+  },
+  {
+    "id": "charito-tavara",
+    "name": "Mg. Charito Távara Sabalú",
+    "role": "Miembro Fundador & Nodo Perú",
+    "country": "Perú",
+    "countryCode": "PE",
+    "city": "Lima",
+    "institution": "Universidad Peruana Cayetano Heredia (UPCH)",
+    "title": "Lic. en Educación Primaria, Magíster en Orientación y Tutoría, Doctoranda en Educación",
+    "category": "Investigadora en formación",
+    "email": "contacto@relise.org",
+    "photo": "",
+    "orcid": "https://orcid.org/0000-0002-5523-8839",
+    "linkedin": "",
+    "bio": "Licenciada en Educación Primaria, Magíster en Orientación y Tutoría y doctoranda en Educación. Especialista e investigadora en inclusión educativa, tutoría, acompañamiento socioemocional y bienestar integral de los estudiantes.",
+    "areas": [
+      "Inclusión educativa y diversidad",
+      "Orientación y tutoría escolar",
+      "Acompañamiento socioemocional y bienestar estudiantil"
+    ],
+    "highlights": [
+      "Investigadora en tutoría universitaria y acompañamiento socioeducativo en Perú.",
+      "Desarrollo de estrategias pedagógicas para la atención a la diversidad."
+    ],
+    "flag": "/flags/pe.png"
+  },
+  {
+    "id": "patricio-carreno",
+    "name": "Prof. Patricio Carreño",
+    "role": "Miembro Fundador & Nodo Chile",
+    "country": "Chile",
+    "countryCode": "CL",
+    "city": "Santiago",
+    "institution": "Red de Educación Superior",
+    "title": "Investigador Académico en Formación Ciudadana",
+    "category": "Investigador consolidado",
+    "email": "contacto@relise.org",
+    "photo": "",
+    "orcid": "",
+    "linkedin": "",
+    "bio": "Investigador y académico chileno vinculado a procesos de formación ciudadana, educación superior, participación democrática y transformación pedagógica en el cono sur de América Latina.",
+    "areas": [
+      "Formación ciudadana y democracia",
+      "Educación superior y desarrollo social",
+      "Políticas públicas juveniles en Chile y la región"
+    ],
+    "highlights": [
+      "Promotor de iniciativas de ciudadanía activa en comunidades escolares y universitarias.",
+      "Articulador del nodo chileno de RELISE."
+    ],
+    "flag": "/flags/cl.png"
+  }
+]

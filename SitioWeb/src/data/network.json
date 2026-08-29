@@ -1,0 +1,144 @@
+{
+  "name": "RELISE",
+  "fullName": "Red Latinoamericana de Investigación Social y Educativa",
+  "tagline": "Construyendo conocimiento colaborativo, interdisciplinario y transformador en América Latina.",
+  "foundedYear": 2026,
+  "headquarters": "Red Regional Virtual (Uruguay, Colombia, México, Costa Rica, Perú, Chile)",
+  "contactEmail": "contacto@relise.org",
+  "stats": [
+    {
+      "label": "Países Integrados",
+      "value": "6",
+      "highlight": "Nodos Nacionales Activos"
+    },
+    {
+      "label": "Investigadores Fundadores",
+      "value": "11+",
+      "highlight": "Doctores y Magísteres"
+    },
+    {
+      "label": "Líneas de Investigación",
+      "value": "8",
+      "highlight": "Ejes Interdisciplinarios"
+    },
+    {
+      "label": "Publicaciones & Productos",
+      "value": "30+",
+      "highlight": "Artículos, Libros y REA"
+    }
+  ],
+  "countries": [
+    {
+      "code": "UY",
+      "name": "Uruguay",
+      "members": 3,
+      "hub": "Montevideo",
+      "institutions": "ANEP, CFE, DGES, UdelaR, UTEC, ORT"
+    },
+    {
+      "code": "CO",
+      "name": "Colombia",
+      "members": 3,
+      "hub": "Bogotá",
+      "institutions": "Iberoamericana, Cuauhtémoc, MinCiencias"
+    },
+    {
+      "code": "CR",
+      "name": "Costa Rica",
+      "members": 2,
+      "hub": "San José / Alajuela",
+      "institutions": "Universidad Estatal a Distancia (UNED), UNA"
+    },
+    {
+      "code": "MX",
+      "name": "México",
+      "members": 1,
+      "hub": "Puebla / Xalapa",
+      "institutions": "UO Global Universidad Online, Univ. Veracruzana"
+    },
+    {
+      "code": "PE",
+      "name": "Perú",
+      "members": 1,
+      "hub": "Lima",
+      "institutions": "Universidad Peruana Cayetano Heredia (UPCH)"
+    },
+    {
+      "code": "CL",
+      "name": "Chile",
+      "members": 1,
+      "hub": "Santiago",
+      "institutions": "Red de Formación Ciudadana"
+    }
+  ],
+  "researchLines": [
+    {
+      "id": "ia-educacion",
+      "title": "Inteligencia Artificial y Tecnologías Digitales en Educación",
+      "description": "Estudio del impacto pedagógico, ético y metodológico de los modelos de lenguaje (LLM), herramientas generativas y el pensamiento computacional en la formación docente y escolar.",
+      "icon": "Cpu",
+      "coordinator": "Santiago Hernández & Diego Daluz"
+    },
+    {
+      "id": "inclusion-diversidad",
+      "title": "Educación Inclusiva, Accesibilidad y Lenguas de Señas",
+      "description": "Investigación sobre entornos accesibles, estudios de la comunidad sorda, traducción LSU-Español y diseño de ambientes de aprendizaje sin barreras para la diversidad humana.",
+      "icon": "HeartHandshake",
+      "coordinator": "María Eugenia Rodino & Diego Daluz"
+    },
+    {
+      "id": "politicas-genero",
+      "title": "Políticas Públicas, Género y Desarrollo Social",
+      "description": "Análisis e incidencia en formulación de políticas públicas educativas y comunitarias, enfoque de género, derechos humanos y desarrollo social en poblaciones vulnerables.",
+      "icon": "Scale",
+      "coordinator": "Ángela Rodríguez Rodríguez"
+    },
+    {
+      "id": "ciencias-ambiente",
+      "title": "Educación Ambiental, Biología y Recursos Naturales",
+      "description": "Innovación en didáctica de las ciencias naturales a distancia, etnozoología, conservación de biodiversidad y mediación pedagógica en prácticas de campo.",
+      "icon": "Leaf",
+      "coordinator": "Magaly Rodríguez Calvo & Idania Valverde Rojas"
+    },
+    {
+      "id": "cultura-poder",
+      "title": "Cultura, Subjetividad, Infancias y Juventudes",
+      "description": "Abordaje crítico interdisciplinario sobre subjetividades contemporáneas, infancias, procesos de paz, interculturalidad y relaciones de poder en América Latina.",
+      "icon": "Users",
+      "coordinator": "Dr. Reisner de Jesús Ravelo Méndez"
+    },
+    {
+      "id": "gestion-paz",
+      "title": "Gestión Educativa, Bienestar Emocional y Educación para la Paz",
+      "description": "Modelos directivos, diseño curricular para la paz, tutoría universitaria y programas de bienestar socioemocional en comunidades educativas.",
+      "icon": "Smile",
+      "coordinator": "Dr. Omar Alexis Elías Segura & Charito Távara"
+    }
+  ],
+  "principles": [
+    {
+      "name": "Horizontalidad",
+      "desc": "Construcción colegiada y democrática de decisiones y proyectos."
+    },
+    {
+      "name": "Ciencia Abierta",
+      "desc": "Acceso libre y transparente al conocimiento y a los productos de investigación."
+    },
+    {
+      "name": "Reciprocidad Académica",
+      "desc": "Intercambio solidario de saberes y experiencias entre nodos regionales."
+    },
+    {
+      "name": "Inclusión y Diversidad",
+      "desc": "Reconocimiento ético de la pluralidad cultural, lingüística y funcional."
+    },
+    {
+      "name": "Ética en Investigación",
+      "desc": "Rigurosidad metodológica, honestidad y compromiso social transformador."
+    },
+    {
+      "name": "Innovación Pedagógica",
+      "desc": "Creación de nuevas respuestas para los desafíos educativos del siglo XXI."
+    }
+  ]
+}
