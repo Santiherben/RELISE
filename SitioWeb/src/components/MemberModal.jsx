@@ -31,42 +31,50 @@ export default function MemberModal({ member, onClose }) {
             </div>
           )}
 
+          {/* Close button */}
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 p-2 bg-black/40 hover:bg-black/60 text-white rounded-full transition-colors cursor-pointer z-10"
+            className="absolute top-4 right-4 p-2.5 rounded-full bg-slate-900/80 hover:bg-slate-800 text-slate-300 hover:text-white transition-colors cursor-pointer border border-slate-700/60 z-10"
             aria-label="Cerrar modal"
           >
             <X className="w-5 h-5" />
           </button>
+
+          {/* Member category badge */}
+          <div className="relative z-10">
+            <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-white/20 text-white backdrop-blur-md border border-white/30">
+              {member.category}
+            </span>
+          </div>
         </div>
 
-        {/* Profile Card Body */}
-        <div className="px-6 sm:px-8 pb-8 pt-0 relative z-10">
-          <div className="flex flex-col sm:flex-row items-center sm:items-end gap-5 -mt-16 mb-6 text-center sm:text-left">
-            <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-3xl overflow-hidden border-4 border-[#0a192f] shadow-2xl bg-[#071526] shrink-0">
-              {member.photo ? (
-                <img
-                  src={member.photo}
-                  alt={member.name}
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.src = 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80';
-                  }}
-                />
-              ) : (
-                <div className="w-full h-full flex items-center justify-center bg-blue-900 text-blue-200 font-bold text-2xl">
-                  {member.name.split(' ').map(n => n[0]).slice(0, 2).join('')}
+        {/* Member Header Info */}
+        <div className="p-6 sm:p-8 -mt-16 relative z-10">
+          <div className="flex flex-col sm:flex-row items-start sm:items-end gap-5 mb-6">
+            <div className="relative">
+              <img
+                src={member.photo}
+                alt={member.name}
+                className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl object-cover border-4 border-[#0a192f] shadow-2xl bg-slate-800"
+              />
+              {member.flag && (
+                <div className="absolute -bottom-2 -right-2 w-8 h-8 rounded-full border-2 border-[#0a192f] overflow-hidden shadow-lg">
+                  <img
+                    src={member.flag}
+                    alt={member.country}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               )}
             </div>
 
             <div className="flex-1">
-              <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-1">
-                <span className="px-3 py-0.5 rounded-full text-xs font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30">
+              <div className="flex flex-wrap items-center gap-2 mb-1">
+                <span className="text-xs font-bold text-relise-red-400 uppercase tracking-wider">
                   {member.role}
                 </span>
-                <span className="px-3 py-0.5 rounded-full text-xs font-semibold bg-[#071526] text-slate-300 border border-blue-900/40 flex items-center gap-1.5">
+                <span className="text-slate-400 text-xs">•</span>
+                <span className="text-xs text-slate-300 flex items-center gap-1">
                   <MapPin className="w-3 h-3 text-blue-400" />
                   {member.city}, {member.country}
                 </span>
@@ -123,6 +131,44 @@ export default function MemberModal({ member, onClose }) {
               {member.bio}
             </p>
           </div>
+
+          {/* Creaciones & Software Desarrollado */}
+          {member.projects && member.projects.length > 0 && (
+            <div className="mb-6">
+              <h4 className="text-sm font-bold uppercase tracking-wider text-white mb-2.5 flex items-center gap-2">
+                <Sparkles className="w-4 h-4 text-amber-400" />
+                <span>Creaciones & Desarrollos Destacados</span>
+              </h4>
+              <div className="grid grid-cols-1 gap-2.5">
+                {member.projects.map((proj, i) => (
+                  <a
+                    key={i}
+                    href={proj.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3.5 bg-[#0c213d] hover:bg-[#102d54] rounded-2xl border border-blue-500/25 hover:border-blue-400 transition-all flex items-center justify-between gap-3 group/proj"
+                  >
+                    <div>
+                      <div className="flex items-center gap-2">
+                        <h5 className="text-xs sm:text-sm font-bold text-white group-hover/proj:text-blue-300 transition-colors">
+                          {proj.name}
+                        </h5>
+                        <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded-md bg-blue-500/20 text-blue-300 border border-blue-500/30">
+                          App / Software
+                        </span>
+                      </div>
+                      <p className="text-xs text-slate-300 mt-1 leading-relaxed">
+                        {proj.description}
+                      </p>
+                    </div>
+                    <div className="p-2 rounded-xl bg-blue-600/20 group-hover/proj:bg-blue-600 text-blue-300 group-hover/proj:text-white transition-all shrink-0">
+                      <ExternalLink className="w-4 h-4" />
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Research Areas */}
           {member.areas && member.areas.length > 0 && (

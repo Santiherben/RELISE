@@ -6,7 +6,7 @@
     "country": "Uruguay",
     "countryCode": "UY",
     "city": "Montevideo",
-    "institution": "ANEP / CFE / DGES - EDyTIC / ORT / UNLP",
+    "institution": "Desarrollador Freelance • ANEP / CFE / DGES - EDyTIC",
     "title": "Prof. de Informática, Lic. en Pedagogía, Esp. en Tecnología Educativa",
     "category": "Investigador consolidado",
     "email": "santiago.hernandez@cfe.edu.uy",
@@ -26,7 +26,24 @@
       "Desarrollo de contenidos y marcos pedagógicos de informática para DGES-EDyTIC.",
       "Organizador de encuentros y jornadas académicas de innovación tecnológica educativa."
     ],
-    "flag": "./flags/uy.png"
+    "flag": "./flags/uy.png",
+    "projects": [
+      {
+        "name": "AnalizadorCualiUY",
+        "description": "Software especializado en análisis cualitativo de datos para investigación social y educativa.",
+        "url": "https://analizadorcualiuy-gif.github.io/analizadorcualuybeta/"
+      },
+      {
+        "name": "IAG en Clave de Ética Pedagógica",
+        "description": "Aplicación interactiva y marco pedagógico sobre el uso ético y crítico de la Inteligencia Artificial Generativa en educación.",
+        "url": "https://contenidistas.github.io/IAG-en-clave-de-etica-pedagogica/"
+      },
+      {
+        "name": "Protocolo de Entrega de Celular",
+        "description": "Aplicación y protocolo formativo para la gestión responsable y pedagógica de dispositivos móviles en el aula.",
+        "url": "https://contenidistas.github.io/ProtocoloEntregaCelular/"
+      }
+    ]
   },
   {
     "id": "diego-daluz",
