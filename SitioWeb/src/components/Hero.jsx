@@ -6,6 +6,9 @@ export default function Hero({ onOpenActa }) {
   const [scrollY, setScrollY] = useState(0);
   const [mouseTilt, setMouseTilt] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
+  const [isDoveFlying, setIsDoveFlying] = useState(true);
+  const [showLandingRipple, setShowLandingRipple] = useState(false);
+  const [flightKey, setFlightKey] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +18,36 @@ export default function Hero({ onOpenActa }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Controla el ciclo del vuelo inaugural y el pulso luminoso al posarse en el escudo
+  useEffect(() => {
+    if (!isDoveFlying) return;
+
+    const rippleTimer = setTimeout(() => {
+      setShowLandingRipple(true);
+    }, 3350);
+
+    const landTimer = setTimeout(() => {
+      setIsDoveFlying(false);
+    }, 3700);
+
+    const clearRippleTimer = setTimeout(() => {
+      setShowLandingRipple(false);
+    }, 4550);
+
+    return () => {
+      clearTimeout(rippleTimer);
+      clearTimeout(landTimer);
+      clearTimeout(clearRippleTimer);
+    };
+  }, [isDoveFlying, flightKey]);
+
+  const handleReplayFlight = () => {
+    if (isDoveFlying) return;
+    setShowLandingRipple(false);
+    setIsDoveFlying(true);
+    setFlightKey((prev) => prev + 1);
+  };
+
   // Parallax subtle background movement
   const logoOpacity = Math.max(0.04, 0.16 - scrollY * 0.0003);
   const logoTranslateY = scrollY * 0.18;
@@ -23,8 +56,8 @@ export default function Hero({ onOpenActa }) {
   const scrollRotateY = (scrollY * 0.24) % 360;
   const scrollRotateX = Math.min(18, scrollY * 0.04);
   
-  const currentRotateX = isHovered ? mouseTilt.y : scrollRotateX;
-  const currentRotateY = isHovered ? mouseTilt.x + scrollRotateY : scrollRotateY;
+  const currentRotateX = isDoveFlying ? 0 : (isHovered ? mouseTilt.y : scrollRotateX);
+  const currentRotateY = isDoveFlying ? 0 : (isHovered ? mouseTilt.x + scrollRotateY : scrollRotateY);
 
   const handleMouseMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -73,12 +106,13 @@ export default function Hero({ onOpenActa }) {
         {/* Prominent Official Logo Showcase with Scroll 3D Rotation, Tilt & Chromatic Aura */}
         <div className="flex flex-col items-center justify-center mb-8">
           <div 
-            className="relative group cursor-pointer animate-float-logo"
-            onClick={() => window.scrollTo({ top: 650, behavior: 'smooth' })}
+            className={`relative group cursor-pointer ${isDoveFlying ? 'z-30' : 'animate-float-logo z-20'}`}
+            onClick={handleReplayFlight}
             onMouseMove={handleMouseMove}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             style={{ perspective: 1200 }}
+            title="Haz clic para que la paloma de RELISE vuelva a volar"
           >
             {/* Dynamic Chromatic Aura that shifts through the colors of Latin American flags */}
             <div className="absolute -inset-10 rounded-full blur-3xl animate-chroma-aura opacity-75 group-hover:opacity-100 transition-opacity duration-700" />
@@ -87,15 +121,65 @@ export default function Hero({ onOpenActa }) {
             <div 
               className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-88 md:h-88 lg:w-[350px] lg:h-[350px] rounded-3xl p-3 sm:p-5 bg-white shadow-[0_25px_70px_rgba(0,0,0,0.5),0_0_60px_rgba(255,255,255,0.45)] ring-4 sm:ring-8 ring-white/80 border-2 border-white flex items-center justify-center transition-transform duration-150 ease-out"
               style={{
-                transform: `rotateY(${currentRotateY}deg) rotateX(${currentRotateX}deg) scale(${isHovered ? 1.05 : 1})`,
+                transform: `rotateY(${currentRotateY}deg) rotateX(${currentRotateX}deg) scale(${isHovered && !isDoveFlying ? 1.05 : 1})`,
                 transformStyle: 'preserve-3d',
               }}
             >
-              <img
-                src="./logo/logoOficialRELISE_transparent.png"
-                alt="Emblema Oficial RELISE"
-                className="w-full h-full object-contain filter drop-shadow-md"
-              />
+              <div className="relative w-full h-full flex items-center justify-center" style={{ transformStyle: 'preserve-3d' }}>
+                {/* Base del Emblema Oficial RELISE (sin la paloma mientras vuela, y acoplada al aterrizar) */}
+                <img
+                  src="./logo/logo_sin_paloma.png"
+                  alt="Emblema Oficial RELISE"
+                  className="w-full h-full object-contain filter drop-shadow-md select-none"
+                />
+
+                {/* Onda luminosa cuando la paloma aterriza en su lugar dentro del escudo */}
+                {showLandingRipple && (
+                  <div
+                    className="absolute pointer-events-none z-20 w-32 h-32 sm:w-44 sm:h-44 rounded-full border-2 border-amber-400/90 bg-gradient-to-tr from-relise-red-500/30 via-blue-400/25 to-emerald-400/30 animate-landing-ripple"
+                    style={{ left: '28%', top: '45%' }}
+                  />
+                )}
+
+                {/* Paloma articulada en 3 capas (ala trasera, cuerpo, ala delantera) */}
+                <div
+                  key={flightKey}
+                  className={`absolute inset-0 pointer-events-none select-none z-30 ${
+                    isDoveFlying ? 'dove-flight-active' : 'dove-flight-landed filter drop-shadow-md'
+                  }`}
+                >
+                  {/* Estela cromática durante el vuelo */}
+                  {isDoveFlying && (
+                    <div
+                      className="absolute w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-gradient-to-r from-relise-red-500/50 via-emerald-400/45 to-blue-400/50 blur-xl -z-10 animate-pulse"
+                      style={{ left: '12%', top: '30%' }}
+                    />
+                  )}
+
+                  {/* Ala trasera (páginas derechas verde, azul y roja) */}
+                  <img
+                    src="./logo/paloma_ala_trasera.png"
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute inset-0 w-full h-full object-contain dove-wing-back"
+                  />
+
+                  {/* Cuerpo, cabeza y cola de la paloma */}
+                  <img
+                    src="./logo/paloma_cuerpo.png"
+                    alt="Paloma del escudo RELISE"
+                    className="absolute inset-0 w-full h-full object-contain dove-body-layer"
+                  />
+
+                  {/* Ala delantera (plumas rojas, verdes, azules y páginas izquierdas) */}
+                  <img
+                    src="./logo/paloma_ala_delantera.png"
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute inset-0 w-full h-full object-contain dove-wing-front"
+                  />
+                </div>
+              </div>
             </div>
           </div>
 
