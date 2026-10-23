@@ -71,7 +71,7 @@ export default function ActaModal({ isOpen, onClose }) {
               Presentación
             </h4>
             <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
-              En las ciudades de México, Costa Rica, Colombia, Perú, Chile y Uruguay, mediante reunión virtual celebrada durante el mes de marzo del año 2026, académicos, investigadores y docentes representantes de instituciones de educación superior y organismos educativos de América Latina acuerdan constituir la <strong>Red Latinoamericana de Investigación Social y Educativa (RELISE)</strong>.
+              En los países de México, Costa Rica, Colombia, Perú, Chile y Uruguay, mediante reunión virtual celebrada durante el mes de marzo del año 2026, académicos, investigadores y docentes representantes de instituciones de educación superior y organismos educativos de América Latina acuerdan constituir la <strong>Red Latinoamericana de Investigación Social y Educativa (RELISE)</strong>.
             </p>
             <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
               La presente red nace con el propósito de fortalecer los vínculos de cooperación científica, técnica, pedagógica y humana entre investigadores de la región, promoviendo espacios de producción colectiva de conocimiento orientados a la comprensión y transformación de las realidades sociales y educativas latinoamericanas.
@@ -123,7 +123,9 @@ export default function ActaModal({ isOpen, onClose }) {
                   {teamData.map((m) => (
                     <tr key={m.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/50">
                       <td className="px-4 py-2.5 font-bold text-slate-900 dark:text-white">{m.name}</td>
-                      <td className="px-4 py-2.5 text-slate-600 dark:text-slate-300">{m.institution.split('/')[0]}</td>
+                      <td className="px-4 py-2.5 text-slate-600 dark:text-slate-300">
+                        {m.institution.includes('•') ? m.institution.split('•')[1].trim() : m.institution.split('/')[0].trim()}
+                      </td>
                       <td className="px-4 py-2.5">
                         <span className="px-2 py-0.5 rounded-md bg-brand-50 dark:bg-brand-950 text-brand-800 dark:text-brand-300 font-semibold">
                           {m.country}

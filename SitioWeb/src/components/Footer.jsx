@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe2, FileText, ArrowUp } from 'lucide-react';
+import { Globe2, FileText, ArrowUp, Code2 } from 'lucide-react';
 
 export default function Footer({ onOpenActa }) {
   const scrollToTop = () => {
@@ -66,9 +66,15 @@ export default function Footer({ onOpenActa }) {
         </div>
 
         <div className="pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <p>
-            © {new Date().getFullYear()} RELISE. Todos los derechos reservados. Conocimiento abierto para América Latina.
-          </p>
+          <div className="space-y-1 text-center sm:text-left">
+            <p>
+              © {new Date().getFullYear()} RELISE. Todos los derechos reservados. Conocimiento abierto para América Latina.
+            </p>
+            <p className="text-[11px] text-slate-400 flex items-center justify-center sm:justify-start gap-1.5">
+              <Code2 className="w-3.5 h-3.5 text-blue-400 inline" />
+              <span>Desarrollador responsable: <strong className="text-slate-300 font-semibold">Prof. Esp. Santiago Hernández</strong></span>
+            </p>
+          </div>
 
           <button
             onClick={scrollToTop}
