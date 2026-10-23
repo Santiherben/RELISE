@@ -7,6 +7,9 @@ export default function MemberModal({ member, onClose }) {
 
   // Find publications associated with this member (ignoring title prefixes)
   const memberPubs = publicationsData.filter(p => {
+    if (p.memberId && p.memberId === member.id) return true;
+    if (p.memberIds && p.memberIds.includes(member.id)) return true;
+
     const cleanMemberName = member.name
       .replace(/^(Dr\.|Dra\.|Mg\.|Mag\.|MSc\.|Prof\.|Esp\.)\s+/gi, '')
       .replace(/^(Dr\.|Dra\.|Mg\.|Mag\.|MSc\.|Prof\.|Esp\.)\s+/gi, '')
@@ -177,6 +180,56 @@ export default function MemberModal({ member, onClose }) {
             </div>
           )}
 
+          {/* Member Publications / Obra with direct links */}
+          {memberPubs.length > 0 && (
+            <div className="mb-6 pt-2">
+              <h4 className="text-sm font-bold uppercase tracking-wider text-white mb-3 flex items-center justify-between">
+                <span className="flex items-center gap-2">
+                  <BookOpen className="w-4 h-4 text-blue-400" />
+                  <span>Obras y Publicaciones Registradas</span>
+                </span>
+                <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30">
+                  {memberPubs.length} {memberPubs.length === 1 ? 'publicación' : 'publicaciones'}
+                </span>
+              </h4>
+              <div className="space-y-3">
+                {memberPubs.map((pub) => (
+                  <div key={pub.id} className="p-4 bg-[#0c213d] rounded-2xl border border-blue-500/20 hover:border-blue-400/40 transition-colors shadow-sm">
+                    <div className="flex flex-wrap items-center gap-2 mb-2">
+                      <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-blue-500/20 text-blue-300 border border-blue-500/30">
+                        {pub.type} • {pub.year}
+                      </span>
+                      {pub.topic && (
+                        <span className="text-[10px] text-slate-400 font-medium">
+                          • {pub.topic}
+                        </span>
+                      )}
+                    </div>
+                    <h5 className="text-xs sm:text-sm font-bold text-white leading-snug">
+                      {pub.title}
+                    </h5>
+                    <p className="text-xs text-slate-400 mt-1.5 leading-relaxed">
+                      <strong className="text-slate-300">Fuente / Editorial:</strong> {pub.publisher} {pub.isbn ? `• ISBN: ${pub.isbn}` : ''} {pub.issn ? `• ISSN: ${pub.issn}` : ''}
+                    </p>
+                    {pub.url && (
+                      <div className="mt-3 pt-2.5 border-t border-blue-900/30 flex items-center justify-end">
+                        <a
+                          href={pub.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-white bg-blue-600 hover:bg-blue-500 rounded-xl transition-all shadow-md group/link cursor-pointer"
+                        >
+                          <span>Acceder a la publicación</span>
+                          <ExternalLink className="w-3.5 h-3.5 group-hover/link:translate-x-0.5 transition-transform" />
+                        </a>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Research Areas */}
           {member.areas && member.areas.length > 0 && (
             <div className="mb-6">
@@ -199,7 +252,7 @@ export default function MemberModal({ member, onClose }) {
 
           {/* Highlights */}
           {member.highlights && member.highlights.length > 0 && (
-            <div className="mb-6">
+            <div className="mb-2">
               <h4 className="text-sm font-bold uppercase tracking-wider text-white mb-2.5 flex items-center gap-2">
                 <Sparkles className="w-4 h-4 text-amber-400" />
                 <span>Aportes Destacados & Proyectos</span>
@@ -212,31 +265,6 @@ export default function MemberModal({ member, onClose }) {
                   </li>
                 ))}
               </ul>
-            </div>
-          )}
-
-          {/* Member Publications if available */}
-          {memberPubs.length > 0 && (
-            <div className="mt-6 pt-6 border-t border-blue-900/40">
-              <h4 className="text-sm font-bold uppercase tracking-wider text-white mb-3 flex items-center gap-2">
-                <BookOpen className="w-4 h-4 text-blue-400" />
-                <span>Publicaciones Registradas en RELISE</span>
-              </h4>
-              <div className="space-y-2.5">
-                {memberPubs.map((pub) => (
-                  <div key={pub.id} className="p-3.5 bg-[#0c213d] rounded-2xl border border-blue-500/20">
-                    <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-blue-500/20 text-blue-300 border border-blue-500/30">
-                      {pub.type} • {pub.year}
-                    </span>
-                    <h5 className="text-xs sm:text-sm font-bold text-white mt-2">
-                      {pub.title}
-                    </h5>
-                    <p className="text-xs text-slate-400 mt-1">
-                      {pub.publisher} {pub.isbn ? `• ISBN: ${pub.isbn}` : ''} {pub.issn ? `• ISSN: ${pub.issn}` : ''}
-                    </p>
-                  </div>
-                ))}
-              </div>
             </div>
           )}
 

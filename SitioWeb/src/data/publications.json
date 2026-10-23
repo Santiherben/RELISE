@@ -115,5 +115,30 @@
     "doi": "",
     "url": "",
     "topic": "Inteligencia Artificial y Educación"
+  },
+  {
+    "id": "pub-11",
+    "memberId": "omar-alexis-elias",
+    "title": "Aprendizaje Basado en Proyectos como fomento de intervención social: una mirada del ejercicio profesional docente",
+    "authors": "Omar Alexis Elías Segura",
+    "year": "2026",
+    "type": "Artículo de Revista",
+    "publisher": "Revista Horizontes Pedagógicos (Vol. 27, Núm. 2, pp. 75–82)",
+    "issn": "0123-8264",
+    "doi": "",
+    "url": "https://horizontespedagogicos.ibero.edu.co/article/view/3389",
+    "topic": "Aprendizaje Basado en Proyectos e Intervención Social"
+  },
+  {
+    "id": "pub-12",
+    "memberId": "omar-alexis-elias",
+    "title": "Fomento de la Educación para la Paz y de las competencias socioemocionales en infantes de nivel primaria, a través de la generación de proyectos de mediación pedagógica",
+    "authors": "Omar Alexis Elías Segura",
+    "year": "2026",
+    "type": "Artículo de Revista",
+    "publisher": "Academia.edu",
+    "doi": "",
+    "url": "https://www.academia.edu/169072236/Fomento_de_la_Educaci%C3%B3n_para_la_Paz_y_de_las_competencias_socioemocionales_en_infantes_de_nivel_primaria_a_trav%C3%A9s_de_la_generaci%C3%B3n_de_proyectos_de_mediaci%C3%B3n_pedag%C3%B3gica",
+    "topic": "Educación para la Paz y Mediación Pedagógica"
   }
 ]

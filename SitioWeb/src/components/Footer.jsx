@@ -1,5 +1,6 @@
 import React from 'react';
 import { Globe2, FileText, ArrowUp, Code2 } from 'lucide-react';
+import VisitorCounter from './VisitorCounter';
 
 export default function Footer({ onOpenActa }) {
   const scrollToTop = () => {
@@ -65,24 +66,29 @@ export default function Footer({ onOpenActa }) {
 
         </div>
 
-        <div className="pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <div className="space-y-1 text-center sm:text-left">
+        <div className="pt-8 border-t border-slate-800/80 flex flex-col md:flex-row items-center justify-between gap-5 text-xs text-slate-500">
+          <div className="space-y-1 text-center md:text-left">
             <p>
               © {new Date().getFullYear()} RELISE. Todos los derechos reservados. Conocimiento abierto para América Latina.
             </p>
-            <p className="text-[11px] text-slate-400 flex items-center justify-center sm:justify-start gap-1.5">
+            <p className="text-[11px] text-slate-400 flex items-center justify-center md:justify-start gap-1.5">
               <Code2 className="w-3.5 h-3.5 text-blue-400 inline" />
               <span>Desarrollador responsable: <strong className="text-slate-300 font-semibold">Prof. Esp. Santiago Hernández</strong></span>
             </p>
           </div>
 
-          <button
-            onClick={scrollToTop}
-            className="p-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 rounded-xl transition-colors flex items-center gap-1.5 cursor-pointer"
-          >
-            <span>Volver arriba</span>
-            <ArrowUp className="w-3.5 h-3.5" />
-          </button>
+          {/* Visitor Counter */}
+          <div className="flex items-center gap-3">
+            <VisitorCounter />
+            <button
+              onClick={scrollToTop}
+              className="p-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 rounded-xl transition-colors flex items-center gap-1.5 cursor-pointer"
+              title="Volver arriba"
+            >
+              <span className="hidden sm:inline text-xs">Volver arriba</span>
+              <ArrowUp className="w-3.5 h-3.5" />
+            </button>
+          </div>
         </div>
       </div>
     </footer>

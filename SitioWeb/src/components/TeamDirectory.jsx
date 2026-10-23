@@ -1,12 +1,30 @@
 import React, { useState } from 'react';
-import { Search, Mail, Building, ArrowRight, Sparkles, MapPin } from 'lucide-react';
+import { Search, Mail, Building, ArrowRight, Sparkles, MapPin, BookOpen } from 'lucide-react';
 import teamData from '../data/team.json';
+import publicationsData from '../data/publications.json';
 
 export default function TeamDirectory({ selectedCountry, onSelectCountry, onSelectMember }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedArea, setSelectedArea] = useState('Todas');
 
   const countries = ['Todos', 'Uruguay', 'Colombia', 'Costa Rica', 'México', 'Perú', 'Chile'];
+
+  // Helper to get publication count for each member
+  const getMemberPubCount = (member) => {
+    return publicationsData.filter(p => {
+      if (p.memberId && p.memberId === member.id) return true;
+      if (p.memberIds && p.memberIds.includes(member.id)) return true;
+      const cleanMemberName = member.name
+        .replace(/^(Dr\.|Dra\.|Mg\.|Mag\.|MSc\.|Prof\.|Esp\.)\s+/gi, '')
+        .replace(/^(Dr\.|Dra\.|Mg\.|Mag\.|MSc\.|Prof\.|Esp\.)\s+/gi, '')
+        .trim()
+        .toLowerCase();
+      const authors = p.authors.toLowerCase();
+      if (authors.includes(cleanMemberName)) return true;
+      const parts = cleanMemberName.split(/\s+/).filter(part => part.length > 2);
+      return parts.length >= 2 && authors.includes(parts[0]) && authors.includes(parts[parts.length - 1]);
+    }).length;
+  };
 
   // Filtering
   const filteredTeam = teamData.filter((member) => {
@@ -43,7 +61,7 @@ export default function TeamDirectory({ selectedCountry, onSelectCountry, onSele
             Directorio de Investigadores
           </h2>
           <p className="mt-4 text-slate-300 text-sm sm:text-base leading-relaxed">
-            Perfiles académicos, filiaciones institucionales y trayectorias de los miembros fundadores e investigadores de RELISE en América Latina.
+            Perfiles académicos, filiaciones institucionales y trayectorias de los miembros fundadores e investigadores de RELISE en América Latina. Haga clic sobre cualquier investigador para consultar su trayectoria y publicaciones.
           </p>
         </div>
 
@@ -102,128 +120,143 @@ export default function TeamDirectory({ selectedCountry, onSelectCountry, onSele
 
         {/* Grid of Researchers with diffused flag watermark */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredTeam.map((member) => (
-            <div
-              key={member.id}
-              className="relative rounded-3xl p-6 sm:p-7 bg-[#0c213d]/90 border border-blue-500/20 shadow-xl hover:shadow-2xl hover:border-blue-400/60 transition-all duration-300 flex flex-col justify-between group overflow-hidden hover:-translate-y-1 backdrop-blur-xl"
-            >
-              {/* Diffused Country Flag in Card Background */}
-              {member.flag && (
-                <div className="absolute -top-6 -right-6 w-44 h-32 pointer-events-none select-none opacity-20 group-hover:opacity-30 transition-opacity duration-300 filter blur-[1px] overflow-hidden rounded-3xl">
-                  <img
-                    src={member.flag}
-                    alt={`Bandera de ${member.country}`}
-                    className="w-full h-full object-cover transform rotate-6 scale-110"
-                  />
-                  {/* Soft gradient mask over flag */}
-                  <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#0c213d]/60 to-[#0c213d]" />
-                </div>
-              )}
+          {filteredTeam.map((member) => {
+            const pubCount = getMemberPubCount(member);
+            return (
+              <div
+                key={member.id}
+                onClick={() => onSelectMember(member)}
+                className="relative rounded-3xl p-6 sm:p-7 bg-[#0c213d]/90 border border-blue-500/20 shadow-xl hover:shadow-2xl hover:border-blue-400/60 transition-all duration-300 flex flex-col justify-between group overflow-hidden hover:-translate-y-1 backdrop-blur-xl cursor-pointer"
+              >
+                {/* Diffused Country Flag in Card Background */}
+                {member.flag && (
+                  <div className="absolute -top-6 -right-6 w-44 h-32 pointer-events-none select-none opacity-20 group-hover:opacity-30 transition-opacity duration-300 filter blur-[1px] overflow-hidden rounded-3xl">
+                    <img
+                      src={member.flag}
+                      alt={`Bandera de ${member.country}`}
+                      className="w-full h-full object-cover transform rotate-6 scale-110"
+                    />
+                    {/* Soft gradient mask over flag */}
+                    <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#0c213d]/60 to-[#0c213d]" />
+                  </div>
+                )}
 
-              <div className="relative z-10">
-                {/* Photo & Header */}
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-16 h-16 rounded-2xl overflow-hidden bg-[#071526] border-2 border-blue-400/40 shrink-0 group-hover:scale-105 transition-transform shadow-md">
-                    {member.photo ? (
-                      <img
-                        src={member.photo}
-                        alt={member.name}
-                        className="w-full h-full object-cover"
-                        onError={(e) => {
-                          e.target.onerror = null;
-                          e.target.src = 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80';
-                        }}
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center bg-blue-900 text-blue-200 font-bold text-lg">
-                        {member.name.split(' ').map(n => n[0]).slice(0, 2).join('')}
+                <div className="relative z-10">
+                  {/* Photo & Header */}
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-16 h-16 rounded-2xl overflow-hidden bg-[#071526] border-2 border-blue-400/40 shrink-0 group-hover:scale-105 transition-transform shadow-md">
+                      {member.photo ? (
+                        <img
+                          src={member.photo}
+                          alt={member.name}
+                          className="w-full h-full object-cover"
+                          onError={(e) => {
+                            e.target.onerror = null;
+                            e.target.src = 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80';
+                          }}
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center bg-blue-900 text-blue-200 font-bold text-lg">
+                          {member.name.split(' ').map(n => n[0]).slice(0, 2).join('')}
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-1.5 mb-1">
+                        <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 flex items-center gap-1">
+                          <MapPin className="w-2.5 h-2.5" />
+                          {member.country}
+                        </span>
+                        {pubCount > 0 && (
+                          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1">
+                            <BookOpen className="w-2.5 h-2.5" />
+                            {pubCount} {pubCount === 1 ? 'obra' : 'obras'}
+                          </span>
+                        )}
                       </div>
+                      <h3 className="text-base font-bold text-white truncate group-hover:text-blue-300 transition-colors">
+                        {member.name}
+                      </h3>
+                      <p className="text-xs text-slate-300 truncate mt-0.5">
+                        {member.title}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Institution */}
+                  <div className="mb-4 text-xs text-slate-300 flex items-start gap-1.5 line-clamp-2">
+                    <Building className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />
+                    <span>{member.institution}</span>
+                  </div>
+
+                  {/* Bio teaser */}
+                  <p className="text-xs text-slate-400 line-clamp-3 leading-relaxed mb-4">
+                    {member.bio}
+                  </p>
+
+                  {/* Badges / Areas */}
+                  <div className="flex flex-wrap gap-1 mb-4">
+                    {member.areas.slice(0, 2).map((area, i) => (
+                      <span
+                        key={i}
+                        className="px-2 py-0.5 rounded-lg text-[10px] font-medium bg-[#071526]/80 text-blue-200 border border-blue-900/40 truncate max-w-[200px]"
+                      >
+                        {area}
+                      </span>
+                    ))}
+                    {member.areas.length > 2 && (
+                      <span className="px-1.5 py-0.5 rounded-lg text-[10px] font-medium bg-[#071526]/80 text-slate-400 border border-blue-900/40">
+                        +{member.areas.length - 2}
+                      </span>
+                    )}
+                  </div>
+                </div>
+
+                {/* Bottom Actions */}
+                <div 
+                  className="relative z-10 pt-4 border-t border-blue-900/40 flex items-center justify-between gap-2"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <div className="flex items-center gap-1.5">
+                    {member.orcid && (
+                      <a
+                        href={member.orcid}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-2 py-1 rounded-lg bg-[#A6CE39]/15 hover:bg-[#A6CE39]/30 text-[#a0ca2f] text-[11px] font-bold flex items-center gap-1 border border-[#A6CE39]/30 transition-colors"
+                        title="Ver ORCID"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <span>ORCID</span>
+                      </a>
+                    )}
+                    {member.email && (
+                      <a
+                        href={`mailto:${member.email}`}
+                        className="p-1.5 rounded-lg bg-[#071526] hover:bg-blue-900/60 text-slate-300 hover:text-white border border-blue-900/30 transition-colors"
+                        title="Enviar correo"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <Mail className="w-3.5 h-3.5" />
+                      </a>
                     )}
                   </div>
 
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-1.5 mb-1">
-                      <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 flex items-center gap-1">
-                        <MapPin className="w-2.5 h-2.5" />
-                        {member.country}
-                      </span>
-                      <span className="text-[10px] text-slate-400 truncate">
-                        {member.city}
-                      </span>
-                    </div>
-                    <h3 className="text-base font-bold text-white truncate group-hover:text-blue-300 transition-colors">
-                      {member.name}
-                    </h3>
-                    <p className="text-xs text-slate-300 truncate mt-0.5">
-                      {member.title}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Institution */}
-                <div className="mb-4 text-xs text-slate-300 flex items-start gap-1.5 line-clamp-2">
-                  <Building className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />
-                  <span>{member.institution}</span>
-                </div>
-
-                {/* Bio teaser */}
-                <p className="text-xs text-slate-400 line-clamp-3 leading-relaxed mb-4">
-                  {member.bio}
-                </p>
-
-                {/* Badges / Areas */}
-                <div className="flex flex-wrap gap-1 mb-4">
-                  {member.areas.slice(0, 2).map((area, i) => (
-                    <span
-                      key={i}
-                      className="px-2 py-0.5 rounded-lg text-[10px] font-medium bg-[#071526]/80 text-blue-200 border border-blue-900/40 truncate max-w-[200px]"
-                    >
-                      {area}
-                    </span>
-                  ))}
-                  {member.areas.length > 2 && (
-                    <span className="px-1.5 py-0.5 rounded-lg text-[10px] font-medium bg-[#071526]/80 text-slate-400 border border-blue-900/40">
-                      +{member.areas.length - 2}
-                    </span>
-                  )}
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onSelectMember(member);
+                    }}
+                    className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-blue-600/30 hover:bg-blue-600 text-blue-200 hover:text-white text-xs font-bold transition-all border border-blue-500/30 cursor-pointer shadow-sm group-hover:bg-blue-600 group-hover:text-white"
+                  >
+                    <span>{pubCount > 0 ? 'Ver obras y perfil' : 'Perfil completo'}</span>
+                    <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                  </button>
                 </div>
               </div>
-
-              {/* Bottom Actions */}
-              <div className="relative z-10 pt-4 border-t border-blue-900/40 flex items-center justify-between gap-2">
-                <div className="flex items-center gap-1.5">
-                  {member.orcid && (
-                    <a
-                      href={member.orcid}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-2 py-1 rounded-lg bg-[#A6CE39]/15 hover:bg-[#A6CE39]/30 text-[#a0ca2f] text-[11px] font-bold flex items-center gap-1 border border-[#A6CE39]/30 transition-colors"
-                      title="Ver ORCID"
-                    >
-                      <span>ORCID</span>
-                    </a>
-                  )}
-                  {member.email && (
-                    <a
-                      href={`mailto:${member.email}`}
-                      className="p-1.5 rounded-lg bg-[#071526] hover:bg-blue-900/60 text-slate-300 hover:text-white border border-blue-900/30 transition-colors"
-                      title="Enviar correo"
-                    >
-                      <Mail className="w-3.5 h-3.5" />
-                    </a>
-                  )}
-                </div>
-
-                <button
-                  onClick={() => onSelectMember(member)}
-                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-blue-600/30 hover:bg-blue-600 text-blue-200 hover:text-white text-xs font-bold transition-all border border-blue-500/30 cursor-pointer shadow-sm"
-                >
-                  <span>Perfil completo</span>
-                  <ArrowRight className="w-3 h-3" />
-                </button>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
       </div>

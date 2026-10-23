@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Sun, Moon, FileText } from 'lucide-react';
+import VisitorCounter from './VisitorCounter';
 
 export default function Navbar({ darkMode, setDarkMode, onOpenActa }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -79,8 +80,9 @@ export default function Navbar({ darkMode, setDarkMode, onOpenActa }) {
             </button>
           </nav>
 
-          {/* Theme switcher */}
+          {/* Theme switcher & visit counter */}
           <div className="hidden sm:flex items-center gap-3">
+            <VisitorCounter className="hidden xl:inline-flex" />
             <button
               onClick={() => setDarkMode(!darkMode)}
               className="p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-xl transition-colors cursor-pointer"
@@ -112,6 +114,9 @@ export default function Navbar({ darkMode, setDarkMode, onOpenActa }) {
         {isOpen && (
           <div className="lg:hidden mt-3 p-4 bg-slate-900 rounded-2xl shadow-2xl border border-slate-800 animate-fadeIn">
             <div className="flex flex-col gap-2">
+              <div className="pb-2 border-b border-slate-800 flex justify-center">
+                <VisitorCounter />
+              </div>
               {navLinks.map((link) => (
                 <a
                   key={link.name}
