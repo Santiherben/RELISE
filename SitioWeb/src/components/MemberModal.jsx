@@ -5,11 +5,18 @@ import publicationsData from '../data/publications.json';
 export default function MemberModal({ member, onClose }) {
   if (!member) return null;
 
-  // Find publications associated with this member
-  const memberPubs = publicationsData.filter(p => 
-    p.authors.toLowerCase().includes(member.name.toLowerCase()) ||
-    member.name.toLowerCase().includes(p.authors.toLowerCase().split(' ')[0])
-  );
+  // Find publications associated with this member (ignoring title prefixes)
+  const memberPubs = publicationsData.filter(p => {
+    const cleanMemberName = member.name
+      .replace(/^(Dr\.|Dra\.|Mg\.|Mag\.|MSc\.|Prof\.|Esp\.)\s+/gi, '')
+      .replace(/^(Dr\.|Dra\.|Mg\.|Mag\.|MSc\.|Prof\.|Esp\.)\s+/gi, '')
+      .trim()
+      .toLowerCase();
+    const authors = p.authors.toLowerCase();
+    if (authors.includes(cleanMemberName)) return true;
+    const parts = cleanMemberName.split(/\s+/).filter(part => part.length > 2);
+    return parts.length >= 2 && authors.includes(parts[0]) && authors.includes(parts[parts.length - 1]);
+  });
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-[#030914]/85 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 animate-fadeIn">
