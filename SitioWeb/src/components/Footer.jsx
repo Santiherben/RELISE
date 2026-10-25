@@ -8,54 +8,54 @@ export default function Footer({ onOpenActa }) {
   };
 
   return (
-    <footer className="bg-slate-950 text-slate-300 pt-16 pb-12 border-t border-slate-800">
+    <footer className="bg-slate-100 dark:bg-slate-950 text-slate-600 dark:text-slate-300 pt-16 pb-12 border-t border-slate-200 dark:border-slate-800 transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3.5">
-              <div className="w-13 h-13 rounded-2xl bg-white p-1.5 shadow-md border border-white/90 flex items-center justify-center">
+              <div className="w-13 h-13 rounded-2xl bg-white p-1.5 shadow-md border border-slate-200/80 dark:border-white/90 flex items-center justify-center">
                 <img src="./logo/logoOficialRELISE_transparent.png" alt="Logo RELISE" className="w-full h-full object-contain" />
               </div>
-              <span className="font-black text-2xl text-white tracking-tight">
+              <span className="font-black text-2xl text-slate-900 dark:text-white tracking-tight">
                 <span className="text-relise-red-500">REL</span>
-                <span className="text-blue-400">ISE</span>
+                <span className="text-blue-500 dark:text-blue-400">ISE</span>
               </span>
             </div>
-            <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
+            <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed max-w-sm">
               <strong>Red Latinoamericana de Investigación Social y Educativa.</strong> Un espacio internacional e interdisciplinario para la producción científica, la cooperación horizontal y la innovación pedagógica en América Latina.
             </p>
-            <div className="flex items-center gap-2 text-xs text-blue-400">
+            <div className="flex items-center gap-2 text-xs text-blue-600 dark:text-blue-400">
               <Globe2 className="w-4 h-4" />
               <span>Nodos en Uruguay, Colombia, Costa Rica, México, Perú y Chile</span>
             </div>
           </div>
 
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-4">
               Navegación
             </h4>
             <ul className="space-y-2 text-xs">
-              <li><a href="#inicio" className="hover:text-white transition-colors">Inicio</a></li>
-              <li><a href="#identidad" className="hover:text-white transition-colors">Identidad Institucional</a></li>
-              <li><a href="#nodos" className="hover:text-white transition-colors">Nodos Regionales</a></li>
-              <li><a href="#equipo" className="hover:text-white transition-colors">Directorio de Investigadores</a></li>
-              <li><a href="#lineas" className="hover:text-white transition-colors">Líneas de Investigación</a></li>
+              <li><a href="#inicio" className="hover:text-slate-900 dark:hover:text-white transition-colors">Inicio</a></li>
+              <li><a href="#identidad" className="hover:text-slate-900 dark:hover:text-white transition-colors">Identidad Institucional</a></li>
+              <li><a href="#nodos" className="hover:text-slate-900 dark:hover:text-white transition-colors">Nodos Regionales</a></li>
+              <li><a href="#equipo" className="hover:text-slate-900 dark:hover:text-white transition-colors">Directorio de Investigadores</a></li>
+              <li><a href="#lineas" className="hover:text-slate-900 dark:hover:text-white transition-colors">Líneas de Investigación</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white mb-4">
               Producción & Red
             </h4>
             <ul className="space-y-2 text-xs">
-              <li><a href="#publicaciones" className="hover:text-white transition-colors">Publicaciones & DOIs</a></li>
-              <li><a href="#eventos" className="hover:text-white transition-colors">Disertaciones 2026</a></li>
-              <li><a href="#eventos" className="hover:text-white transition-colors">Libro Colectivo de Memorias</a></li>
+              <li><a href="#publicaciones" className="hover:text-slate-900 dark:hover:text-white transition-colors">Publicaciones & DOIs</a></li>
+              <li><a href="#eventos" className="hover:text-slate-900 dark:hover:text-white transition-colors">Disertaciones 2026</a></li>
+              <li><a href="#eventos" className="hover:text-slate-900 dark:hover:text-white transition-colors">Libro Colectivo de Memorias</a></li>
               <li>
                 <button
                   onClick={onOpenActa}
-                  className="hover:text-white transition-colors text-left flex items-center gap-1.5 cursor-pointer text-blue-400 font-semibold"
+                  className="hover:text-blue-800 dark:hover:text-white transition-colors text-left flex items-center gap-1.5 cursor-pointer text-blue-600 dark:text-blue-400 font-semibold"
                 >
                   <FileText className="w-3.5 h-3.5" />
                   <span>Acta Constitutiva</span>
@@ -66,14 +66,14 @@ export default function Footer({ onOpenActa }) {
 
         </div>
 
-        <div className="pt-8 border-t border-slate-800/80 flex flex-col md:flex-row items-center justify-between gap-5 text-xs text-slate-500">
+        <div className="pt-8 border-t border-slate-200 dark:border-slate-800/80 flex flex-col md:flex-row items-center justify-between gap-5 text-xs text-slate-500">
           <div className="space-y-1 text-center md:text-left">
             <p>
               © {new Date().getFullYear()} RELISE. Todos los derechos reservados. Conocimiento abierto para América Latina.
             </p>
-            <p className="text-[11px] text-slate-400 flex items-center justify-center md:justify-start gap-1.5">
-              <Code2 className="w-3.5 h-3.5 text-blue-400 inline" />
-              <span>Desarrollador responsable: <strong className="text-slate-300 font-semibold">Prof. Esp. Santiago Hernández</strong></span>
+            <p className="text-[11px] text-slate-500 dark:text-slate-400 flex items-center justify-center md:justify-start gap-1.5">
+              <Code2 className="w-3.5 h-3.5 text-blue-500 dark:text-blue-400 inline" />
+              <span>Desarrollador responsable: <strong className="text-slate-700 dark:text-slate-300 font-semibold">Prof. Esp. Santiago Hernández</strong></span>
             </p>
           </div>
 
@@ -82,7 +82,7 @@ export default function Footer({ onOpenActa }) {
             <VisitorCounter />
             <button
               onClick={scrollToTop}
-              className="p-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 rounded-xl transition-colors flex items-center gap-1.5 cursor-pointer"
+              className="p-2 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 rounded-xl transition-colors flex items-center gap-1.5 cursor-pointer shadow-xs"
               title="Volver arriba"
             >
               <span className="hidden sm:inline text-xs">Volver arriba</span>

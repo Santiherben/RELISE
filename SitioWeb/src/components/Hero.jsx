@@ -73,7 +73,7 @@ export default function Hero({ onOpenActa }) {
   };
 
   return (
-    <section id="inicio" className="relative pt-32 pb-24 md:pt-40 md:pb-32 bg-gradient-to-b from-[#06101e] via-[#0a192f] to-[#09182d] text-white overflow-hidden flex flex-col justify-center min-h-[92vh]">
+    <section id="inicio" className="relative pt-32 pb-24 md:pt-40 md:pb-32 bg-gradient-to-b from-slate-50 via-blue-50/40 to-slate-100 text-slate-900 dark:from-[#06101e] dark:via-[#0a192f] dark:to-[#09182d] dark:text-white overflow-hidden flex flex-col justify-center min-h-[92vh] transition-colors duration-200">
       
       {/* Background Soft Parallax Watermark Emblem */}
       <div 
@@ -88,18 +88,18 @@ export default function Hero({ onOpenActa }) {
           <img
             src="./logo/logoOficialRELISE_transparent.png"
             alt="Logo RELISE Fondo"
-            className="w-full h-full object-contain filter drop-shadow-[0_0_100px_rgba(59,130,246,0.3)]"
+            className="w-full h-full object-contain filter drop-shadow-[0_0_80px_rgba(59,130,246,0.15)] dark:drop-shadow-[0_0_100px_rgba(59,130,246,0.3)]"
           />
         </div>
       </div>
 
       {/* Radiant ambient glow spotlights in navy, red & teal hues */}
-      <div className="absolute top-1/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-relise-red-600/15 rounded-full blur-[160px] pointer-events-none -z-10" />
-      <div className="absolute top-1/3 right-1/4 translate-x-1/2 w-[650px] h-[650px] bg-blue-500/20 rounded-full blur-[170px] pointer-events-none -z-10" />
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-emerald-500/15 rounded-full blur-[150px] pointer-events-none -z-10" />
+      <div className="absolute top-1/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-relise-red-500/10 dark:bg-relise-red-600/15 rounded-full blur-[160px] pointer-events-none -z-10" />
+      <div className="absolute top-1/3 right-1/4 translate-x-1/2 w-[650px] h-[650px] bg-blue-400/15 dark:bg-blue-500/20 rounded-full blur-[170px] pointer-events-none -z-10" />
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-emerald-400/10 dark:bg-emerald-500/15 rounded-full blur-[150px] pointer-events-none -z-10" />
 
       {/* Grid pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e3a5f15_1px,transparent_1px),linear-gradient(to_bottom,#1e3a5f15_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_75%_65%_at_50%_45%,#000_70%,transparent_100%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#0000000a_1px,transparent_1px),linear-gradient(to_bottom,#0000000a_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#1e3a5f15_1px,transparent_1px),linear-gradient(to_bottom,#1e3a5f15_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_75%_65%_at_50%_45%,#000_70%,transparent_100%)] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center my-auto">
         
@@ -206,11 +206,11 @@ export default function Hero({ onOpenActa }) {
                       className="orbit-3d-counter block group/flag focus:outline-none"
                       title={`Nodo ${country.name} - Ver investigadores e instituciones`}
                     >
-                      <div className="relative w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-slate-950/95 hover:bg-slate-900 border-2 border-white/70 hover:border-amber-400 shadow-xl backdrop-blur-md transition-all duration-300 hover:scale-130 flex items-center justify-center cursor-pointer group-hover/flag:ring-4 group-hover/flag:ring-blue-400/50">
+                      <div className="relative w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white dark:bg-slate-950/95 hover:bg-slate-50 dark:hover:bg-slate-900 border-2 border-slate-200 dark:border-white/70 hover:border-amber-500 dark:hover:border-amber-400 shadow-md dark:shadow-xl backdrop-blur-md transition-all duration-300 hover:scale-130 flex items-center justify-center cursor-pointer group-hover/flag:ring-4 group-hover/flag:ring-blue-400/50">
                         <img
                           src={`./flags/${country.code.toLowerCase()}.png`}
                           alt={`Bandera de ${country.name}`}
-                          className="w-5 h-3.5 sm:w-6 sm:h-4 object-cover rounded-xs shadow-sm"
+                          className="w-5 h-3.5 sm:w-6 sm:h-4 object-cover rounded-xs shadow-xs"
                         />
                       </div>
                     </a>
@@ -220,26 +220,26 @@ export default function Hero({ onOpenActa }) {
             </div>
           </div>
 
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/95 border border-white text-slate-900 text-xs sm:text-sm font-bold uppercase tracking-wider mt-1 shadow-xl backdrop-blur-md">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/95 dark:bg-white/95 border border-slate-200 dark:border-white text-slate-900 text-xs sm:text-sm font-bold uppercase tracking-wider mt-1 shadow-md dark:shadow-xl backdrop-blur-md">
             <Sparkles className="w-4 h-4 text-amber-500 shrink-0" />
             <span className="bg-gradient-to-r from-relise-red-600 via-blue-700 to-emerald-700 bg-clip-text text-transparent font-extrabold">Red Latinoamericana de Investigación Social y Educativa</span>
           </div>
         </div>
 
         {/* Hero Title with Dual-Color Brand Focus: REL (Red) + ISE (Blue) */}
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[1.05] text-white mb-6">
-          <span className="text-relise-red-500 drop-shadow-[0_0_40px_rgba(220,38,38,0.45)]">REL</span>
-          <span className="text-blue-400 drop-shadow-[0_0_40px_rgba(96,165,250,0.45)]">ISE</span>
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[1.05] text-slate-900 dark:text-white mb-6">
+          <span className="text-relise-red-600 dark:text-relise-red-500 drop-shadow-[0_0_40px_rgba(220,38,38,0.2)] dark:drop-shadow-[0_0_40px_rgba(220,38,38,0.45)]">REL</span>
+          <span className="text-blue-600 dark:text-blue-400 drop-shadow-[0_0_40px_rgba(96,165,250,0.2)] dark:drop-shadow-[0_0_40px_rgba(96,165,250,0.45)]">ISE</span>
         </h1>
 
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-slate-100 max-w-4xl mx-auto tracking-tight leading-snug mb-6">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-slate-800 dark:text-slate-100 max-w-4xl mx-auto tracking-tight leading-snug mb-6">
           Construyendo conocimiento colaborativo, interdisciplinario y transformador en América Latina
         </h2>
 
         {/* Narrative description */}
-        <p className="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto font-normal leading-relaxed mb-10">
+        <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto font-normal leading-relaxed mb-10">
           Articulamos esfuerzos de investigación científica, innovación pedagógica e inclusión social entre nodos académicos de{' '}
-          <strong className="text-white font-semibold">
+          <strong className="text-slate-900 dark:text-white font-semibold">
             Uruguay, Colombia, Costa Rica, México, Perú y Chile
           </strong>.
         </p>
@@ -248,7 +248,7 @@ export default function Hero({ onOpenActa }) {
         <div className="flex flex-wrap items-center justify-center gap-4 mb-14">
           <a
             href="#equipo"
-            className="inline-flex items-center gap-2.5 px-7 py-4 text-sm font-bold text-white bg-gradient-to-r from-relise-red-600 via-relise-red-500 to-blue-600 hover:from-relise-red-500 hover:to-blue-500 rounded-2xl shadow-xl shadow-relise-red-500/25 hover:shadow-blue-500/35 transition-all hover:scale-[1.03] active:scale-[0.98] cursor-pointer"
+            className="inline-flex items-center gap-2.5 px-7 py-4 text-sm font-bold text-white bg-gradient-to-r from-relise-red-600 via-relise-red-500 to-blue-600 hover:from-relise-red-500 hover:to-blue-500 rounded-2xl shadow-lg shadow-relise-red-500/25 hover:shadow-blue-500/35 transition-all hover:scale-[1.03] active:scale-[0.98] cursor-pointer"
           >
             <Users className="w-4 h-4" />
             <span>Explorar Investigadores</span>
@@ -257,24 +257,24 @@ export default function Hero({ onOpenActa }) {
 
           <button
             onClick={onOpenActa}
-            className="inline-flex items-center gap-2 px-7 py-4 text-sm font-bold text-slate-200 bg-[#0d2242]/90 hover:bg-[#112d54] rounded-2xl border border-blue-500/30 shadow-xl backdrop-blur-xl transition-all hover:scale-[1.03] cursor-pointer"
+            className="inline-flex items-center gap-2 px-7 py-4 text-sm font-bold text-slate-700 dark:text-slate-200 bg-white/95 dark:bg-[#0d2242]/90 hover:bg-slate-100 dark:hover:bg-[#112d54] rounded-2xl border border-slate-200 dark:border-blue-500/30 shadow-md dark:shadow-xl backdrop-blur-xl transition-all hover:scale-[1.03] cursor-pointer"
           >
-            <FileText className="w-4 h-4 text-blue-400" />
+            <FileText className="w-4 h-4 text-blue-600 dark:text-blue-400" />
             <span>Ver Acta Constitutiva Oficial</span>
           </button>
         </div>
 
-        {/* Key Metrics Bar in rich navy container */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto bg-[#0d2242]/80 p-5 sm:p-7 rounded-3xl border border-blue-500/20 shadow-2xl backdrop-blur-xl">
+        {/* Key Metrics Bar in rich container */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto bg-white/90 dark:bg-[#0d2242]/80 p-5 sm:p-7 rounded-3xl border border-slate-200/90 dark:border-blue-500/20 shadow-xl dark:shadow-2xl backdrop-blur-xl">
           {networkData.stats.map((stat, idx) => (
-            <div key={idx} className="p-3 text-center border-r last:border-r-0 border-blue-900/40">
-              <div className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-relise-red-400 via-blue-300 to-emerald-400 bg-clip-text text-transparent tracking-tight">
+            <div key={idx} className="p-3 text-center border-r last:border-r-0 border-slate-200 dark:border-blue-900/40">
+              <div className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-relise-red-600 via-blue-600 to-emerald-600 dark:from-relise-red-400 dark:via-blue-300 dark:to-emerald-400 bg-clip-text text-transparent tracking-tight">
                 {stat.value}
               </div>
-              <div className="text-xs font-bold text-white mt-1">
+              <div className="text-xs font-bold text-slate-900 dark:text-white mt-1">
                 {stat.label}
               </div>
-              <div className="text-[11px] text-blue-200/70 mt-0.5">
+              <div className="text-[11px] text-slate-500 dark:text-blue-200/70 mt-0.5">
                 {stat.highlight}
               </div>
             </div>
@@ -282,9 +282,9 @@ export default function Hero({ onOpenActa }) {
         </div>
 
         {/* Scroll indicator */}
-        <div className="mt-12 flex flex-col items-center gap-1.5 text-xs text-blue-300/70 animate-bounce">
+        <div className="mt-12 flex flex-col items-center gap-1.5 text-xs text-slate-500 dark:text-blue-300/70 animate-bounce">
           <span>Desliza para explorar los ejes y nodos</span>
-          <ChevronDown className="w-4 h-4 text-blue-400" />
+          <ChevronDown className="w-4 h-4 text-blue-600 dark:text-blue-400" />
         </div>
 
       </div>

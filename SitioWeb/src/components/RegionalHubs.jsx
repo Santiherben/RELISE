@@ -13,27 +13,27 @@ export default function RegionalHubs({ selectedCountry, onSelectCountry }) {
   };
 
   const countryGradients = {
-    Uruguay: 'from-blue-600/20 via-slate-900 to-slate-950 border-blue-500/40',
-    Colombia: 'from-amber-600/20 via-slate-900 to-slate-950 border-amber-500/40',
-    'Costa Rica': 'from-emerald-600/20 via-slate-900 to-slate-950 border-emerald-500/40',
-    México: 'from-relise-red-600/20 via-slate-900 to-slate-950 border-relise-red-500/40',
-    Perú: 'from-relise-red-600/20 via-slate-900 to-slate-950 border-relise-red-500/40',
-    Chile: 'from-blue-600/20 via-slate-900 to-slate-950 border-blue-500/40',
+    Uruguay: 'from-blue-50/80 via-white to-blue-50/40 border-blue-200 dark:from-blue-600/20 dark:via-slate-900 dark:to-slate-950 dark:border-blue-500/40',
+    Colombia: 'from-amber-50/80 via-white to-amber-50/40 border-amber-200 dark:from-amber-600/20 dark:via-slate-900 dark:to-slate-950 dark:border-amber-500/40',
+    'Costa Rica': 'from-emerald-50/80 via-white to-emerald-50/40 border-emerald-200 dark:from-emerald-600/20 dark:via-slate-900 dark:to-slate-950 dark:border-emerald-500/40',
+    México: 'from-red-50/80 via-white to-red-50/40 border-red-200 dark:from-relise-red-600/20 dark:via-slate-900 dark:to-slate-950 dark:border-relise-red-500/40',
+    Perú: 'from-red-50/80 via-white to-red-50/40 border-red-200 dark:from-relise-red-600/20 dark:via-slate-900 dark:to-slate-950 dark:border-relise-red-500/40',
+    Chile: 'from-blue-50/80 via-white to-blue-50/40 border-blue-200 dark:from-blue-600/20 dark:via-slate-900 dark:to-slate-950 dark:border-blue-500/40',
   };
 
   return (
-    <section id="nodos" className="py-24 bg-slate-950 text-white relative overflow-hidden">
+    <section id="nodos" className="py-24 bg-white dark:bg-slate-950 text-slate-900 dark:text-white relative overflow-hidden transition-colors duration-200">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/30 text-emerald-700 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider mb-3">
             Nodos Nacionales
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-slate-900 dark:text-white">
             Presencia Regional en América Latina
           </h2>
-          <p className="mt-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <p className="mt-4 text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
             RELISE opera como una red descentralizada en el continente. Seleccione un nodo nacional para filtrar los investigadores e instituciones asociadas.
           </p>
         </div>
@@ -42,7 +42,7 @@ export default function RegionalHubs({ selectedCountry, onSelectCountry }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {networkData.countries.map((country) => {
             const isSelected = selectedCountry === country.name;
-            const gradientClass = countryGradients[country.name] || 'from-slate-900 to-slate-950 border-slate-800';
+            const gradientClass = countryGradients[country.name] || 'from-slate-50 to-white border-slate-200 dark:from-slate-900 dark:to-slate-950 dark:border-slate-800';
 
             return (
               <div
@@ -50,8 +50,8 @@ export default function RegionalHubs({ selectedCountry, onSelectCountry }) {
                 onClick={() => onSelectCountry(isSelected ? 'Todos' : country.name)}
                 className={`cursor-pointer rounded-3xl p-7 transition-all duration-300 border bg-gradient-to-b ${gradientClass} ${
                   isSelected
-                    ? 'ring-2 ring-blue-500 shadow-2xl scale-[1.02]'
-                    : 'hover:border-slate-600 hover:shadow-xl hover:-translate-y-1'
+                    ? 'ring-2 ring-blue-500 shadow-xl dark:shadow-2xl scale-[1.02]'
+                    : 'hover:border-slate-300 dark:hover:border-slate-600 hover:shadow-xl hover:-translate-y-1 shadow-sm'
                 }`}
               >
                 <div className="flex items-center justify-between mb-4">
@@ -60,7 +60,7 @@ export default function RegionalHubs({ selectedCountry, onSelectCountry }) {
                       {flags[country.code] || '🌐'}
                     </span>
                     <div>
-                      <h3 className="text-lg font-black text-white flex items-center gap-2">
+                      <h3 className="text-lg font-black text-slate-900 dark:text-white flex items-center gap-2">
                         {country.name}
                         {isSelected && (
                           <span className="text-[10px] font-bold bg-blue-600 text-white px-2.5 py-0.5 rounded-full shadow-xs">
@@ -68,29 +68,29 @@ export default function RegionalHubs({ selectedCountry, onSelectCountry }) {
                           </span>
                         )}
                       </h3>
-                      <p className="text-xs text-slate-400 flex items-center gap-1 mt-0.5">
-                        <MapPin className="w-3.5 h-3.5 text-blue-400" />
+                      <p className="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1 mt-0.5">
+                        <MapPin className="w-3.5 h-3.5 text-blue-500 dark:text-blue-400" />
                         <span>Sede: {country.hub}</span>
                       </p>
                     </div>
                   </div>
 
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl text-xs font-black bg-slate-800 text-slate-200 border border-slate-700">
-                    <Users className="w-3.5 h-3.5 text-blue-400" />
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl text-xs font-black bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700">
+                    <Users className="w-3.5 h-3.5 text-blue-500 dark:text-blue-400" />
                     <span>{country.members}</span>
                   </span>
                 </div>
 
-                <div className="mt-4 pt-4 border-t border-slate-800/80">
+                <div className="mt-4 pt-4 border-t border-slate-200 dark:border-slate-800/80">
                   <div className="flex items-start gap-2">
                     <Building className="w-4 h-4 text-slate-400 mt-0.5 shrink-0" />
-                    <p className="text-xs text-slate-300 leading-relaxed font-medium">
+                    <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed font-medium">
                       {country.institutions}
                     </p>
                   </div>
                 </div>
 
-                <div className="mt-5 flex items-center justify-between text-xs font-bold text-blue-400">
+                <div className="mt-5 flex items-center justify-between text-xs font-bold text-blue-600 dark:text-blue-400">
                   <span>{isSelected ? 'Quitar filtro' : 'Ver investigadores de este nodo'}</span>
                   <span>→</span>
                 </div>
@@ -100,14 +100,14 @@ export default function RegionalHubs({ selectedCountry, onSelectCountry }) {
         </div>
 
         {/* Callout Banner */}
-        <div className="mt-14 p-8 rounded-3xl bg-gradient-to-r from-relise-red-950/40 via-slate-900 to-blue-950/40 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xl backdrop-blur-xl">
+        <div className="mt-14 p-8 rounded-3xl bg-gradient-to-r from-blue-50 via-white to-red-50 dark:from-relise-red-950/40 dark:via-slate-900 dark:to-blue-950/40 border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl dark:shadow-2xl backdrop-blur-xl">
           <div className="flex items-center gap-4">
             <div className="p-3.5 bg-blue-600 text-white rounded-2xl shadow-lg">
               <Globe2 className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="text-base font-black text-white">¿Desea sumar a su universidad o centro?</h4>
-              <p className="text-xs text-slate-300 mt-0.5">La Red RELISE está permanentemente abierta a la incorporación de nuevos nodos en América Latina.</p>
+              <h4 className="text-base font-black text-slate-900 dark:text-white">¿Desea sumar a su universidad o centro?</h4>
+              <p className="text-xs text-slate-600 dark:text-slate-300 mt-0.5">La Red RELISE está permanentemente abierta a la incorporación de nuevos nodos en América Latina.</p>
             </div>
           </div>
           <a

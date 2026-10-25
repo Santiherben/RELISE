@@ -33,33 +33,33 @@ export default function PublicationsSection() {
   };
 
   return (
-    <section id="publicaciones" className="py-24 bg-[#08162b] text-white border-t border-blue-950/60">
+    <section id="publicaciones" className="py-24 bg-slate-50 dark:bg-[#08162b] text-slate-900 dark:text-white border-t border-slate-200 dark:border-blue-950/60 transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-xs font-bold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/30 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-wider mb-3">
             Producción Científica
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-slate-900 dark:text-white">
             Publicaciones & Productos Académicos
           </h2>
-          <p className="mt-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <p className="mt-4 text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
             Consulte la producción de artículos indexados, libros, capítulos, memorias y recursos educativos abiertos generados por los integrantes de RELISE.
           </p>
         </div>
 
         {/* Search & Filter bar */}
-        <div className="bg-[#0c213d]/90 p-4 sm:p-6 rounded-3xl shadow-2xl border border-blue-500/20 mb-10 backdrop-blur-xl">
+        <div className="bg-white dark:bg-[#0c213d]/90 p-4 sm:p-6 rounded-3xl shadow-xl dark:shadow-2xl border border-slate-200 dark:border-blue-500/20 mb-10 backdrop-blur-xl">
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
             <div className="relative flex-1 w-full">
-              <Search className="w-4 h-4 text-blue-300 absolute left-4 top-1/2 -translate-y-1/2" />
+              <Search className="w-4 h-4 text-blue-500 dark:text-blue-300 absolute left-4 top-1/2 -translate-y-1/2" />
               <input
                 type="text"
                 placeholder="Buscar por título, autor, editorial o tema..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-11 pr-4 py-3 text-xs sm:text-sm bg-[#071526]/80 border border-blue-500/30 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-400 text-white placeholder:text-slate-400"
+                className="w-full pl-11 pr-4 py-3 text-xs sm:text-sm bg-slate-50 dark:bg-[#071526]/80 border border-slate-200 dark:border-blue-500/30 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 text-slate-900 dark:text-white placeholder:text-slate-400"
               />
             </div>
 
@@ -71,7 +71,7 @@ export default function PublicationsSection() {
                   className={`px-3.5 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all cursor-pointer ${
                     selectedType === t
                       ? 'bg-gradient-to-r from-relise-red-600 to-blue-600 text-white shadow-md'
-                      : 'bg-[#071526]/70 text-slate-300 hover:bg-[#102747] hover:text-white border border-blue-900/30'
+                      : 'bg-slate-100 dark:bg-[#071526]/70 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-[#102747] hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-blue-900/30'
                   }`}
                 >
                   {t === 'Recurso Audiovisual / Libro Multimedia' ? 'Audiovisual / REA' : t}
@@ -86,38 +86,38 @@ export default function PublicationsSection() {
           {filteredPubs.map((pub) => (
             <div
               key={pub.id}
-              className="bg-[#0c213d]/90 rounded-3xl p-6 sm:p-7 border border-blue-500/20 shadow-xl hover:shadow-2xl hover:border-blue-400/50 transition-all flex flex-col sm:flex-row sm:items-start justify-between gap-5 backdrop-blur-xl"
+              className="bg-white dark:bg-[#0c213d]/90 rounded-3xl p-6 sm:p-7 border border-slate-200/90 dark:border-blue-500/20 shadow-md dark:shadow-xl hover:shadow-xl dark:hover:shadow-2xl hover:border-blue-300 dark:hover:border-blue-400/50 transition-all flex flex-col sm:flex-row sm:items-start justify-between gap-5 backdrop-blur-xl"
             >
               <div className="flex-1">
                 <div className="flex flex-wrap items-center gap-2 mb-2.5">
                   <span className={`text-[10px] font-bold uppercase tracking-wider px-3 py-0.5 rounded-full border ${getBadgeColor(pub.type)}`}>
                     {pub.type}
                   </span>
-                  <span className="text-xs font-bold text-slate-400">
+                  <span className="text-xs font-bold text-slate-500 dark:text-slate-400">
                     {pub.year}
                   </span>
-                  <span className="text-xs text-blue-300 font-medium">
+                  <span className="text-xs text-blue-600 dark:text-blue-300 font-medium">
                     • {pub.topic}
                   </span>
                 </div>
 
-                <h3 className="text-base sm:text-lg font-bold text-white mb-2 leading-snug">
+                <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2 leading-snug">
                   {pub.title}
                 </h3>
 
-                <p className="text-xs text-slate-300 font-medium mb-2.5">
-                  <strong className="text-white">Autores:</strong> {pub.authors}
+                <p className="text-xs text-slate-600 dark:text-slate-300 font-medium mb-2.5">
+                  <strong className="text-slate-900 dark:text-white">Autores:</strong> {pub.authors}
                 </p>
 
-                <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
-                  <span><strong className="text-slate-300">Editorial / Revista:</strong> {pub.publisher}</span>
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-500 dark:text-slate-400">
+                  <span><strong className="text-slate-700 dark:text-slate-300">Editorial / Revista:</strong> {pub.publisher}</span>
                   {pub.isbn && <span><strong>ISBN:</strong> {pub.isbn}</span>}
                   {pub.issn && <span><strong>ISSN:</strong> {pub.issn}</span>}
                 </div>
               </div>
 
               {/* Action / Links */}
-              <div className="shrink-0 flex sm:flex-col items-center sm:items-end justify-between gap-2 pt-3 sm:pt-0 border-t sm:border-t-0 border-blue-900/40">
+              <div className="shrink-0 flex sm:flex-col items-center sm:items-end justify-between gap-2 pt-3 sm:pt-0 border-t sm:border-t-0 border-slate-200 dark:border-blue-900/40">
                 {pub.url ? (
                   <a
                     href={pub.url}
@@ -129,8 +129,8 @@ export default function PublicationsSection() {
                     <ExternalLink className="w-3.5 h-3.5" />
                   </a>
                 ) : (
-                  <span className="inline-flex items-center gap-1 text-xs text-slate-400 font-medium bg-[#071526] px-3 py-1.5 rounded-xl border border-blue-900/30">
-                    <Bookmark className="w-3.5 h-3.5 text-blue-400" />
+                  <span className="inline-flex items-center gap-1 text-xs text-slate-500 dark:text-slate-400 font-medium bg-slate-100 dark:bg-[#071526] px-3 py-1.5 rounded-xl border border-slate-200 dark:border-blue-900/30">
+                    <Bookmark className="w-3.5 h-3.5 text-blue-500 dark:text-blue-400" />
                     <span>Registro Oficial</span>
                   </span>
                 )}

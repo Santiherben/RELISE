@@ -4,18 +4,18 @@ import eventsData from '../data/events.json';
 
 export default function EventsSection() {
   return (
-    <section id="eventos" className="py-24 bg-[#09182d] text-white border-t border-blue-950/60 relative overflow-hidden">
+    <section id="eventos" className="py-24 bg-white dark:bg-[#09182d] text-slate-900 dark:text-white border-t border-slate-200 dark:border-blue-950/60 relative overflow-hidden transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-xs font-bold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/30 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-wider mb-3">
             Agenda Académica
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-slate-900 dark:text-white">
             Congresos, Disertaciones & Encuentros
           </h2>
-          <p className="mt-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <p className="mt-4 text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
             Espacios de debate, socialización científica y formación continua organizados por RELISE y sus universidades aliadas.
           </p>
         </div>
@@ -25,40 +25,40 @@ export default function EventsSection() {
           {eventsData.map((ev) => (
             <div
               key={ev.id}
-              className="bg-[#0c213d]/90 rounded-3xl p-7 border border-blue-500/20 shadow-xl hover:shadow-2xl hover:border-blue-400/50 transition-all flex flex-col justify-between backdrop-blur-xl"
+              className="bg-slate-50 dark:bg-[#0c213d]/90 rounded-3xl p-7 border border-slate-200 dark:border-blue-500/20 shadow-xs dark:shadow-xl hover:shadow-xl dark:hover:shadow-2xl hover:border-blue-300 dark:hover:border-blue-400/50 transition-all flex flex-col justify-between backdrop-blur-xl"
             >
               <div>
                 <div className="flex items-center justify-between gap-2 mb-5">
-                  <span className="text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30">
+                  <span className="text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-500/30">
                     {ev.category}
                   </span>
-                  <span className="text-xs font-bold px-2.5 py-0.5 rounded-md bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                  <span className="text-xs font-bold px-2.5 py-0.5 rounded-md bg-emerald-50 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-500/30">
                     {ev.status}
                   </span>
                 </div>
 
-                <h3 className="text-xl font-bold text-white mb-3 leading-snug">
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 leading-snug">
                   {ev.title}
                 </h3>
 
-                <div className="space-y-2 mb-4 text-xs text-slate-300">
+                <div className="space-y-2 mb-4 text-xs text-slate-600 dark:text-slate-300">
                   <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4 text-blue-400" />
+                    <Calendar className="w-4 h-4 text-blue-500 dark:text-blue-400" />
                     <span>{ev.date}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Video className="w-4 h-4 text-blue-400" />
+                    <Video className="w-4 h-4 text-blue-500 dark:text-blue-400" />
                     <span>{ev.mode}</span>
                   </div>
                 </div>
 
-                <p className="text-xs text-slate-300 leading-relaxed mb-6">
+                <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
                   {ev.description}
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-blue-900/40">
-                <span className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-400">
+              <div className="pt-4 border-t border-slate-200 dark:border-blue-900/40">
+                <span className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 dark:text-blue-400">
                   <span>Actividad Abierta de la Red</span>
                 </span>
               </div>
@@ -67,7 +67,7 @@ export default function EventsSection() {
         </div>
 
         {/* Congress Highlights Gallery Banner in rich navy blue */}
-        <div className="bg-gradient-to-r from-[#0d2242] via-[#0f2a52] to-[#0d2242] rounded-3xl p-8 sm:p-12 border border-blue-500/30 shadow-2xl relative overflow-hidden">
+        <div className="bg-gradient-to-r from-[#0d2242] via-[#0f2a52] to-[#0d2242] rounded-3xl p-8 sm:p-12 border border-blue-500/30 shadow-2xl relative overflow-hidden text-white">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-blue-300 mb-2 block">

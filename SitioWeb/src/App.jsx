@@ -13,12 +13,16 @@ import MemberModal from './components/MemberModal';
 import ActaModal from './components/ActaModal';
 
 export default function App() {
-  const [darkMode, setDarkMode] = useState(true); // Default to rich dark mode
+  const [darkMode, setDarkMode] = useState(() => {
+    const saved = localStorage.getItem('relise_theme');
+    return saved !== null ? saved === 'dark' : true; // Default to dark mode
+  });
   const [selectedCountry, setSelectedCountry] = useState('Todos');
   const [selectedMember, setSelectedMember] = useState(null);
   const [isActaOpen, setIsActaOpen] = useState(false);
 
   useEffect(() => {
+    localStorage.setItem('relise_theme', darkMode ? 'dark' : 'light');
     if (darkMode) {
       document.documentElement.classList.add('dark');
     } else {
@@ -27,7 +31,7 @@ export default function App() {
   }, [darkMode]);
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans transition-colors duration-200 selection:bg-relise-red-500 selection:text-white">
+    <div className="min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 font-sans transition-colors duration-200 selection:bg-relise-red-500 selection:text-white">
       {/* Header */}
       <Navbar
         darkMode={darkMode}

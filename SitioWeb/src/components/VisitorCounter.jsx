@@ -53,17 +53,17 @@ export default function VisitorCounter({ className = '' }) {
 
   return (
     <div
-      className={`inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-2xl bg-[#071526]/90 border border-blue-500/30 text-xs shadow-md backdrop-blur-md transition-all hover:border-blue-400/50 ${className}`}
+      className={`inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-2xl bg-white/90 dark:bg-[#071526]/90 border border-slate-200 dark:border-blue-500/30 text-xs shadow-xs dark:shadow-md backdrop-blur-md transition-all hover:border-blue-300 dark:hover:border-blue-400/50 ${className}`}
       title="Contador global de visitas al portal RELISE"
     >
       <span className="relative flex h-2 w-2">
         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
         <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
       </span>
-      <div className="flex items-center gap-1.5 text-slate-300">
-        <Eye className="w-3.5 h-3.5 text-blue-400" />
-        <span className="text-[11px] font-medium text-slate-400">Visitas:</span>
-        <span className="font-bold text-white font-mono tracking-wider text-xs">
+      <div className="flex items-center gap-1.5 text-slate-600 dark:text-slate-300">
+        <Eye className="w-3.5 h-3.5 text-blue-500 dark:text-blue-400" />
+        <span className="text-[11px] font-medium text-slate-500 dark:text-slate-400">Visitas:</span>
+        <span className="font-bold text-slate-900 dark:text-white font-mono tracking-wider text-xs">
           {loading ? '...' : formattedCount}
         </span>
       </div>
